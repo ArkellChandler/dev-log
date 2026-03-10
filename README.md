@@ -1,2 +1,10 @@
-# dev-log
-Registros técnicos da minha jornada como desenvolvedor em formação. Projetos, exercícios de lógica e estudos de sistemas.
+dev-log
+Bem-vindo ao meu diário de desenvolvimento. Este repositório centraliza minha jornada em ADS, exercícios práticos e experimentos.
+
+📌 Estrutura do Log
+/bootcamp-totvs: Exercícios de Python e lógica.
+
+🛠 Tecnologias
+Python, Git, PowerShell.
+
+Construindo sistemas, um dia de cada vez.
