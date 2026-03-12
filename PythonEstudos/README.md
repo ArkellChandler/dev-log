@@ -1,40 +1,37 @@
-# 🐍 Python Estudos
+# 🐍 Python Estudos - Bootcamp TOTVS
 
-Repositório dedicado ao aprendizado progressivo de lógica de programação, automação e segurança com Python. Aqui registro minha evolução desde os conceitos básicos até a construção de ferramentas funcionais.
+Repositório dedicado ao aprendizado progressivo de lógica de programação, automação e segurança com Python, com foco nos estudos realizados durante o **Bootcamp TOTVS**.
 
 ## 🚀 Tecnologias e Bibliotecas
 - **Python 3.x**: Linguagem principal.
-- **Rich**: Utilizada para criar interfaces de terminal (CLI) visualmente atraentes com tabelas, painéis e cores.
-- **JSON**: Empregado para persistência de dados (salvamento de arquivos no HD).
-- **Git**: Controle de versionamento para rastrear cada passo do aprendizado.
+- **Rich**: Interfaces de terminal interativas.
+- **JSON**: Persistência de dados local.
+- **Git/GitHub**: Controle de versionamento.
+
+## 🏁 Guia Prático de Git
+Confira o [Guia de Git](./GIT.md) com o fluxograma completo do workflow utilizado neste projeto.
 
 ## 📂 Estrutura do Projeto
 
 ### 01_Basico
-Scripts iniciais focados em sintaxe, loops (`for`, `while`) e entradas de dados. Inclui simuladores de varredura de rede e scanners simples.
+Conceitos fundamentais de sintaxe, loops (`for`, `while`) e entradas de dados.
 
 ### 02_Matematica
-Exercícios de lógica matemática e análise de números (par/ímpar, cálculos básicos).
+Exercícios de lógica matemática e processamento de números.
 
 ### 03_Logica
-Desafios de lógica estruturada:
-- **Verificador de Senha**: Analisador de força de strings usando Regex.
-- **Sistema de Segurança**: Simulação de controle de acesso baseado em níveis de usuário (Dicionários e Funções).
+Desafios estruturados com funções e dicionários. Exemplos:
+- **Verificador de Senha**: Regex e análise de força.
+- **Sistema de Segurança**: Controle de acesso lógico.
 
 ### 04_Projetos
-Ferramentas completas e integradas:
-- **Gerenciador de Tarefas (To-Do List)**: Aplicação com menu interativo, CRUD completo (Adicionar, Listar, Concluir, Remover) e salvamento automático em arquivo JSON.
+Aplicações integradas:
+- **Gerenciador de Tarefas (To-Do List)**: CRUD completo com salvamento em arquivo JSON.
 
 ## 🛠️ Como Executar
 1. Certifique-se de ter o Python instalado.
-2. Instale as dependências visuais:
-   ```bash
-   pip install rich
-   ```
-3. Execute qualquer script, por exemplo:
-   ```bash
-   python 04_Projetos/gerenciador_tarefas.py
-   ```
+2. Instale as dependências: `pip install rich`
+3. Execute o script desejado: `python 04_Projetos/gerenciador_tarefas.py`
 
 ---
-*Estudos conduzidos com foco em boas práticas de codificação e versionamento.*
+*Este repositório serve como portfólio de evolução técnica e organização de código.*
