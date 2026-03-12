@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / Pacotes
+build/
+dist/
+*.egg-info/
+
+# Ambientes virtuais
+venv/
+.env
+
+# Arquivos locais e temporários
+*.log
+.vscode/
+.idea/
+%profile/
+tarefas.json
