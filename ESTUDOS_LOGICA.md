@@ -54,7 +54,7 @@ graph TD
 O ciclo completo de como os dados saem do HD, são editados e voltam para o HD.
 
 ```mermaid
-graph STR
+graph TD
     Start([Abrir Programa]) --> Load[Carregar tarefas.json]
     Load --> Menu{Escolha uma Opção}
     
