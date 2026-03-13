@@ -9,8 +9,9 @@ Repositório dedicado ao aprendizado progressivo de lógica de programação, au
 - **Git/GitHub**: Controle de versionamento.
 
 ## 🏁 Guias Práticos
-- **Fluxo Git:** Confira o [Guia de Git](./GIT.md) com o workflow completo.
-- **Lógica e Algoritmos:** Veja os [Estudos de Lógica](./ESTUDOS_LOGICA.md) com fluxogramas detalhados dos sistemas.
+- **Fluxo Git:** Confira o [Guia de Git](./assets/GIT.md) com o workflow completo.
+- **Lógica e Algoritmos:** Veja os [Estudos de Lógica](./assets/ESTUDOS_LOGICA.md) com fluxogramas detalhados.
+- **Currículo Profissional:** Veja o [Ciclo de Vida do Currículo](./assets/ESTUDOS_CURRICULO.md) e a [Tabela de Referência Técnica](./assets/referencia_tecnica_python.html).
 
 ## 📂 Estrutura do Projeto
 
