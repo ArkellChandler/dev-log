@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Referência Técnica Python - Arkell Chandler</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f7f6; padding: 20px; }
+        .container { max-width: 1100px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a365d; text-align: center; border-bottom: 3px solid #3182ce; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.95rem; }
+        th { background: #3182ce; color: white; padding: 12px; text-align: left; text-transform: uppercase; letter-spacing: 1px; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f7fafc; }
+        .tag-mutavel { background: #c6f6d5; color: #22543d; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .tag-imutavel { background: #fed7d7; color: #822727; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        code { background: #edf2f7; padding: 2px 4px; border-radius: 4px; font-family: monospace; color: #2d3748; }
+        .cuidados { color: #c53030; font-size: 0.85rem; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Tabela Técnica: Guia de Referência Python</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Sintaxe</th>
+                    <th>Descrição Literal</th>
+                    <th>Cuidado / Boa Prática</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Coleções -->
+                <tr>
+                    <td><strong>Lista</strong> <span class="tag-mutavel">Mutável</span></td>
+                    <td><code>[item1, item2]</code></td>
+                    <td>Coleção ordenada que aceita duplicatas e alterações.</td>
+                    <td class="cuidados">Cuidado com o índice: 0 é o primeiro. Estoura erro se acessar índice que não existe.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tupla</strong> <span class="tag-imutavel">Imutável</span></td>
+                    <td><code>(item1, item2)</code></td>
+                    <td>Coleção ordenada e travada. Mais rápida e segura.</td>
+                    <td class="cuidados">Não permite <code>append</code> ou <code>pop</code>. Use para dados que nunca mudam.</td>
+                </tr>
+                <tr>
+                    <td><strong>Dicionário</strong> <span class="tag-mutavel">Mutável</span></td>
+                    <td><code>{"chave": "valor"}</code></td>
+                    <td>Dados organizados por etiquetas únicas (chaves).</td>
+                    <td class="cuidados">Chaves devem ser únicas. <code>.items()</code> é necessário para ver chave e valor no loop.</td>
+                </tr>
+                <tr>
+                    <td><strong>Conjunto (Set)</strong> <span class="tag-mutavel">Mutável</span></td>
+                    <td><code>{item1, item2}</code></td>
+                    <td>Sacola de itens únicos. Sem ordem e sem duplicatas.</td>
+                    <td class="cuidados">Não tem índice (não existe <code>set[0]</code>). Apaga repetidos automaticamente.</td>
+                </tr>
+                
+                <!-- Comandos -->
+                <tr>
+                    <td><strong>Def (Função)</strong></td>
+                    <td><code>def nome():</code></td>
+                    <td>Cria uma máquina de ação reutilizável.</td>
+                    <td class="cuidados">Sempre use <code>:</code> no final. O código interno deve ter 4 espaços de recuo.</td>
+                </tr>
+                <tr>
+                    <td><strong>If / Else</strong></td>
+                    <td><code>if condicao:</code></td>
+                    <td>O portão de decisão. Escolhe caminhos lógicos.</td>
+                    <td class="cuidados">Python é Case-Sensitive! "Oi" é diferente de "oi". Use <code>==</code> para comparar.</td>
+                </tr>
+                <tr>
+                    <td><strong>For (Loop)</strong></td>
+                    <td><code>for item in lista:</code></td>
+                    <td>Percorre coleções, item por item.</td>
+                    <td class="cuidados">A variável temporária (item) só existe "dentro" do loop.</td>
+                </tr>
+                
+                <!-- Métodos -->
+                <tr>
+                    <td><strong>.append()</strong></td>
+                    <td><code>lista.append(x)</code></td>
+                    <td>Adiciona um item ao FINAL de uma lista.</td>
+                    <td class="cuidados">Só funciona em Listas. Não use em Tuplas.</td>
+                </tr>
+                <tr>
+                    <td><strong>.pop()</strong></td>
+                    <td><code>lista.pop(indice)</code></td>
+                    <td>Extrai e remove um item pela POSIÇÃO.</td>
+                    <td class="cuidados">Se vazio, remove o último. Devolve o item removido se quiser guardar.</td>
+                </tr>
+                <tr>
+                    <td><strong>.remove()</strong></td>
+                    <td><code>lista.remove(nome)</code></td>
+                    <td>Apaga um item pelo NOME/VALOR literal.</td>
+                    <td class="cuidados">Gera ERRO se o nome não existir na lista. Verifique antes.</td>
+                </tr>
+                <tr>
+                    <td><strong>.add()</strong></td>
+                    <td><code>set.add(x)</code></td>
+                    <td>Adiciona um item a um Conjunto.</td>
+                    <td class="cuidados">Exclusivo para Conjuntos (Sets).</td>
+                </tr>
+                <tr>
+                    <td><strong>del</strong></td>
+                    <td><code>del lista[0]</code></td>
+                    <td>Comando de destruição por posição ou variável.</td>
+                    <td class="cuidados">É definitivo. Não devolve o item apagado. Cuidado ao usar.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #718096; text-align: center;">
+            Documentação técnica gerada para o repositório <strong>dev-log</strong> de Arkell Chandler - Bootcamp TOTVS 2026.
+        </p>
+    </div>
+</body>
+</html>
