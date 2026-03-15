@@ -8,8 +8,10 @@ Repositório dedicado ao aprendizado progressivo de lógica de programação, au
 - **JSON**: Persistência de dados local.
 - **Git/GitHub**: Controle de versionamento.
 
-## 🏁 Guia Prático de Git
-Confira o [Guia de Git](./GIT.md) com o fluxograma completo do workflow utilizado neste projeto.
+## 🏁 Guias Práticos
+- **Fluxo Git:** Confira o [Guia de Git](./assets/GIT.md) com o workflow completo.
+- **Lógica e Algoritmos:** Veja os [Estudos de Lógica](./assets/ESTUDOS_LOGICA.md) com fluxogramas detalhados.
+- **Currículo Profissional:** Veja o [Ciclo de Vida do Currículo](./assets/ESTUDOS_CURRICULO.md) e a [Tabela de Referência Técnica](./assets/referencia_tecnica_python.html).
 
 ## 📂 Estrutura do Projeto
 

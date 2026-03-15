@@ -22,6 +22,14 @@ def carregar_tarefas():
 
 # --- INTERFACE ---
 
+def buscar_tarefas(lista, termo):
+    """Filtra a lista por um termo de busca (ignora maiúsculas/minúsculas)."""
+    resultados = []
+    for tarefa in lista:
+        if termo.lower() in tarefa["nome"].lower():
+            resultados.append(tarefa)
+    return resultados
+
 def exibir_menu():
     console.print("\n[bold blue]       MENU PRINCIPAL[/]")
     console.print("1. Adicionar Tarefa")
@@ -29,8 +37,10 @@ def exibir_menu():
     console.print("3. Marcar como Concluída")
     console.print("4. Remover Tarefa")
     console.print("5. Sair")
+    console.print("6. Buscar Tarefa")
 
 def main():
+    # ... resto do código ...
     # 1. Carregamos o que já existe no HD ao iniciar
     lista_tarefas = carregar_tarefas()
 
@@ -88,6 +98,26 @@ def main():
         elif opcao == '5':
             console.print("[bold red]Saindo... Suas tarefas estão seguras no HD![/]")
             break
+
+        elif opcao == '6':
+            termo = console.input("[bold cyan]O que você está procurando? [/]")
+            resultados = buscar_tarefas(lista_tarefas, termo)
+            
+            if not resultados:
+                console.print(f"[bold yellow]Nenhuma tarefa encontrada para: '{termo}'[/]")
+            else:
+                tabela = Table(title=f"Resultados para: '{termo}'")
+                tabela.add_column("ID Original", justify="center", style="cyan")
+                tabela.add_column("Tarefa", style="magenta")
+                tabela.add_column("Status", justify="center")
+
+                for indice, tarefa in enumerate(lista_tarefas):
+                    if tarefa in resultados:
+                        status = "[green]✔[/]" if tarefa["concluida"] else "[red]✘[/]"
+                        tabela.add_row(str(indice + 1), tarefa["nome"], status)
+                
+                console.print(tabela)
+
         else:
             console.print("[bold red]Opção inválida![/]")
 
