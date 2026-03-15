@@ -1,5 +1,0 @@
-Python
-SQL
-PowerShell
-Git
-Docker
