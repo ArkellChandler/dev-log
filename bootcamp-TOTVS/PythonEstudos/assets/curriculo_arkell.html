@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Arkell Chandler</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d3748;
+            --accent-color: #3182ce;
+            --text-color: #4a5568;
+            --bg-color: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-right: 30px;
+        }
+
+        .header-info h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .header-info p {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .job, .edu, .project {
+            margin-bottom: 15px;
+        }
+
+        .job-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: #edf2f7;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border-radius: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="C:/Users/User/Downloads/arkell imgem.jpeg" alt="Foto de Arkell Chandler" class="photo">
+            <div class="header-info">
+                <h1>Arkell Chandler Hartstein Barbosa</h1>
+                <div class="contact-info">
+                    <span>📍 São Caetano do Sul, SP</span>
+                    <span>📞 (11) 97854-5220</span>
+                    <span>✉️ arkellchandler@gmail.com</span>
+                </div>
+                <div class="contact-info">
+                    <a href="https://linkedin.com/in/arkell-chandler" target="_blank">linkedin.com/in/arkell-chandler</a> |
+                    <a href="https://github.com/ArkellChandler/dev-log" target="_blank">github.com/ArkellChandler/dev-log</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="objetivo">
+            <h2>Objetivo Profissional</h2>
+            <p>Atuar de forma estratégica em Tecnologia da Informação, aplicando habilidades em Python, SQL e Lógica de Programação. Busco oportunidades como Desenvolvedor Júnior ou Estagiário para contribuir com soluções inovadoras e crescer tecnicamente em ambientes de alta performance.</p>
+        </section>
+
+        <section id="qualificacoes">
+            <h2>Resumo de Qualificações</h2>
+            <ul>
+                <li><strong>Desenvolvimento Tech:</strong> Foco atual no Bootcamp TOTVS e Projetos Python.</li>
+                <li><strong>Multilíngue:</strong> Fluente em Português e Espanhol; Nível intermediário em Inglês, Francês e Quéchua.</li>
+                <li><strong>Perfil Analítico:</strong> Experiência em suporte jurídico internacional e e-commerce de grande escala.</li>
+            </ul>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos de Software (GitHub)</h2>
+            <div class="project">
+                <p><strong>Gerenciador de Tarefas Inteligente</strong> <span class="tag">Python</span> <span class="tag">JSON</span></p>
+                <p style="font-size: 0.9rem;">Aplicação CLI completa com persistência de dados e motor de busca parcial integrado.</p>
+            </div>
+            <div class="project">
+                <p><strong>Sistema de Segurança Lógica</strong> <span class="tag">Python</span> <span class="tag">Lógica</span></p>
+                <p style="font-size: 0.9rem;">Algoritmo de validação de acesso utilizando estruturas complexas de dicionários e funções.</p>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <div class="job">
+                <div class="job-header">
+                    <span>Atendente | Outback Steak House</span>
+                    <span>2024 – Atual</span>
+                </div>
+                <p style="font-size: 0.9rem;">Excelência no atendimento ao cliente e resolução de conflitos em ambiente de alto padrão.</p>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <span>Suporte E-commerce | Carrefour S.A</span>
+                    <span>2023 – 2024</span>
+                </div>
+                <p style="font-size: 0.9rem;">Gestão de pedidos, logística reversa e suporte técnico em plataforma digital.</p>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <span>Auxiliar Jurídico | Castedo's & Masafret (Bolívia)</span>
+                    <span>2021 – 2023</span>
+                </div>
+                <p style="font-size: 0.9rem;">Atendimento internacional e organização de fluxos documentais em espanhol.</p>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <div class="edu">
+                <div class="edu-header">
+                    <span>Análise e Desenvolvimento de Sistemas (ADS)</span>
+                    <span>Estácio | 2026</span>
+                </div>
+                <p style="font-size: 0.9rem;">Tecnólogo em andamento (Previsão de conclusão em 2026).</p>
+            </div>
+            <div class="edu">
+                <div class="edu-header">
+                    <span>Bootcamp TOTVS</span>
+                    <span>Em andamento</span>
+                </div>
+                <p style="font-size: 0.9rem;">Capacitação intensiva em desenvolvimento de software e tecnologias TOTVS.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Competências Técnicas (Hard Skills)</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Linguagens: Python, SQL, HTML, CSS</div>
+                <div class="skill-item">Ferramentas: Git, GitHub, VS Code</div>
+                <div class="skill-item">Plataformas: Salesforce, SQL Server (SSIS)</div>
+                <div class="skill-item">Idiomas: Português, Espanhol, Inglês, Francês</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
