@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cola Técnica: SQL, PHP e Python</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; padding: 20px; }
+        h1 { color: #2c3e50; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        code { background: #eee; padding: 2px 4px; border-radius: 4px; font-family: monospace; }
+        .section-title { background: #ecf0f1; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Guia de Referência: Integração SQL</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Comando / Código</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="section-title"><td colspan="3">COMANDOS SQL (SQLite)</td></tr>
+            <tr>
+                <td>Criar Tabela</td>
+                <td><code>CREATE TABLE alunos (id INTEGER PRIMARY KEY, nome TEXT, nota REAL);</code></td>
+                <td>Cria a estrutura da tabela no banco de dados.</td>
+            </tr>
+            <tr>
+                <td>Inserir Dado</td>
+                <td><code>INSERT INTO alunos (nome, nota) VALUES ('Arkell', 10.0);</code></td>
+                <td>Adiciona um novo registro na tabela.</td>
+            </tr>
+            <tr>
+                <td>Consultar Tudo</td>
+                <td><code>SELECT * FROM alunos;</code></td>
+                <td>Mostra todos os registros da tabela.</td>
+            </tr>
+            <tr>
+                <td>Filtrar Dados</td>
+                <td><code>SELECT * FROM alunos WHERE nota > 9.0;</code></td>
+                <td>Busca registros que atendem a uma condição.</td>
+            </tr>
+            <tr>
+                <td>Atualizar Dado</td>
+                <td><code>UPDATE alunos SET nota = 9.5 WHERE nome = 'João';</code></td>
+                <td>Altera informações de um registro existente.</td>
+            </tr>
+            <tr>
+                <td>Remover Dado</td>
+                <td><code>DELETE FROM alunos WHERE nome = 'Maria';</code></td>
+                <td>Exclui um registro da tabela.</td>
+            </tr>
+
+            <tr class="section-title"><td colspan="3">CONEXÃO PHP</td></tr>
+            <tr>
+                <td>Conectar</td>
+                <td><code>$db = new SQLite3('estudos.db');</code></td>
+                <td>Inicia a conexão com o banco de dados via PHP.</td>
+            </tr>
+            <tr>
+                <td>Executar Query</td>
+                <td><code>$resultado = $db->query("SELECT * FROM alunos");</code></td>
+                <td>Envia o comando SQL para o banco através do PHP.</td>
+            </tr>
+            <tr>
+                <td>Execução Terminal</td>
+                <td><code>php.exe -d extension=sqlite3 leitura.php</code></td>
+                <td>Comando para rodar o script PHP com a extensão do SQLite ligada.</td>
+            </tr>
+
+            <tr class="section-title"><td colspan="3">CONEXÃO PYTHON</td></tr>
+            <tr>
+                <td>Importar</td>
+                <td><code>import sqlite3</code></td>
+                <td>Importa a biblioteca nativa do Python para SQL.</td>
+            </tr>
+            <tr>
+                <td>Conectar</td>
+                <td><code>conn = sqlite3.connect('estudos.db')</code></td>
+                <td>Cria o canal de comunicação entre Python e o Banco.</td>
+            </tr>
+            <tr>
+                <td>Buscar Tudo</td>
+                <td><code>cursor.fetchall()</code></td>
+                <td>Coleta todos os dados retornados pela consulta SQL.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
