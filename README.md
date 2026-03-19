@@ -13,28 +13,29 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 
 ### 🛠️ Arquitetura da Solução
 ### 🔄 Fluxo de Dados e Arquitetura
-graph LR
-    subgraph "Origem"
-        A[(MySQL)] 
-    end
+graph TD
+    %% Nós de Dados
+    A[(MySQL - XAMPP)] -->|Extração SQL| B(Python ETL - Pandas)
+    B -->|Cálculo de Impostos| C(Inteligência - Scikit-Learn)
+    C -->|Exportação JSON| D{data_sync.json}
+    
+    %% Camada de Entrega e Resiliência
+    D -->|Consumo de Dados| E[Dashboard PHP]
+    D -->|Documentação API| F[Swagger UI]
+    
+    %% Backup de Emergência
+    B -.->|Failover| G[Backup CSV]
+    G -.->|Recuperação| D
 
-    subgraph "Processamento"
-        B[Python ETL] --> C[Scikit-Learn]
-    end
-
-    subgraph "Entrega"
-        D[swagger.json] --> E[Dashboard PHP]
-        E --> F[Chart.js]
-    end
-
-    A --> B
-    C --> D
-
-    %% Definição de Cores
-    style A fill:#f96,stroke:#333
+    %% Estilização do Gráfico
+    style A fill:#f96,stroke:#333,stroke-width:2px
     style B fill:#69c,stroke:#333,color:#fff
     style C fill:#69c,stroke:#333,color:#fff
+    style D fill:#fff,stroke:#333,stroke-width:2px
     style E fill:#ccf,stroke:#333
+    style F fill:#85ea2d,stroke:#333
+    style G fill:#f99,stroke:#333,stroke-dasharray: 5 5
+
 
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
