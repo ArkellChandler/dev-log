@@ -1,10 +1,14 @@
-# Dev-Log: Engenharia de Dados e Backend
+# # Dev-Log: Engenharia de Dados e Backend
+
+![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
 
 Repositório central para documentação, scripts e estudos técnicos focados em **Integração de Sistemas**, **Backend** e **Bancos de Dados Relacionais**.
 
+---
+
 ## 🌐 Open Source & Comunidade
 * **DIO (Digital Innovation One):** Integrante ativo no ecossistema de aprendizado e projetos de código aberto.
-* **Foco:** Desenvolvimento de soluções escaláveis, integração de dados e arquitetura de sistemas.
+* **Foco:** Desenvolvimento de soluções escaláveis, integração de dados e arquitetura de sistemas distribuídos.
 
 ## 📂 Estrutura do Repositório
 
@@ -26,7 +30,7 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 * **Linguagens:** Python 3.x, PHP 8.x, PowerShell
 * **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
 * **Servidores:** Apache (XAMPP)
-* **Ferramentas:** Git, VS Code, Gemini 3 API, phpMyAdmin
+* **Ferramentas:** Git, VS Code, phpMyAdmin, Terminal Linux (Debian)
 
 ## 🚀 Automação
 Para atualizar os fluxogramas de arquitetura do repositório:
