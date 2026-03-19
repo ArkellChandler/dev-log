@@ -13,8 +13,6 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 
 ### 🛠️ Arquitetura da Solução
 ### 🔄 Fluxo de Dados e Arquitetura
-
-```mermaid
 graph LR
     subgraph "Origem"
         A[(MySQL)] 
