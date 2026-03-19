@@ -24,6 +24,16 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
 4.  **Resiliência (Recovery):** Módulo de recuperação que alterna automaticamente entre SQL, JSON e CSV em caso de falha crítica.
 5.  **Interface de BI:** Dashboard dinâmico em PHP consumindo a ponte JSON e renderizando gráficos via **Chart.js**.
+6.  ## 📑 Documentação Técnica da API (Swagger)
+
+Para garantir a integração entre o motor de dados (Python) e a camada de visualização, utilizamos a especificação **OpenAPI 3.0**. 
+
+### 🔍 Visualização da Interface
+Abaixo, a representação gráfica dos endpoints mapeados para o ETL:
+
+![Interface do Swagger](./assets/swagger-ui.png)
+
+> **Nota de Engenharia:** O contrato de dados completo pode ser consultado no arquivo [swagger.json](./machine_learning/swagger.json). Para uma experiência interativa, copie o conteúdo do JSON e cole no [Swagger Editor](https://editor.swagger.io/).
 
 ---
 
