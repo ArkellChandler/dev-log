@@ -13,30 +13,23 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 
 ### 🛠️ Arquitetura da Solução
 ### 🔄 Fluxo de Dados e Arquitetura
+
+### 🔄 Fluxograma da Arquitetura
+
 ```mermaid
 graph TD
-    %% Nós de Dados
-    A[(MySQL - XAMPP)] -->|Extração SQL| B(Python ETL - Pandas)
-    B -->|Cálculo de Impostos| C(Inteligência - Scikit-Learn)
-    C -->|Exportação JSON| D{data_sync.json}
-    
-    %% Camada de Entrega e Resiliência
-    D -->|Consumo de Dados| E[Dashboard PHP]
-    D -->|Documentação API| F[Swagger UI]
-    
-    %% Backup de Emergência
-    B -.->|Failover| G[Backup CSV]
-    G -.->|Recuperação| D
+    A[(MySQL - XAMPP)] --> B(Python ETL)
+    B --> C(Machine Learning)
+    C --> D{JSON Data}
+    D --> E[Dashboard PHP]
+    D --> F[Swagger Docs]
+    B -.-> G[Backup CSV]
 
-    %% Estilização do Gráfico
-    style A fill:#f96,stroke:#333,stroke-width:2px
-    style B fill:#69c,stroke:#333,color:#fff
-    style C fill:#69c,stroke:#333,color:#fff
-    style D fill:#fff,stroke:#333,stroke-width:2px
-    style E fill:#ccf,stroke:#333
-    style F fill:#85ea2d,stroke:#333
-    style G fill:#f99,stroke:#333,stroke-dasharray: 5 5
-
+    style A fill:#f96
+    style B fill:#69c
+    style D fill:#fff
+    style E fill:#ccf
+    style F fill:#85ea2d
 
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
