@@ -12,6 +12,57 @@ Repositório central para documentação e estudos técnicos focados em **Arquit
 Este projeto demonstra um fluxo completo de dados, desde a extração em um banco relacional até a visualização analítica, com camadas de segurança e recuperação.
 
 ### 🛠️ Arquitetura da Solução
+### 🔄 Fluxo de Dados e Processamento
+
+```mermaid
+graph TD
+    %% Fontes de Dados
+    subgraph "Camada de Dados (XAMPP)"
+        DB[(MySQL/MariaDB)] -- "Dados Brutos" --> PY_ETL
+    end
+
+    %% Processamento Python
+    subgraph "Processamento (Python 3.x)"
+        PY_ETL(Script sync_data.py) -- "1. Limpeza/Tipagem (Pandas)" --> PY_ML
+        PY_ML(Script sync_data.py) -- "2. Predição (Scikit-Learn)" --> PY_JSON
+        PY_JSON(Script sync_data.py) -- "3. Exportação Records" --> ASSETS_DIR
+    end
+
+    %% Camada de Recuperação
+    subgraph "Resiliência (recovery_manager.py)"
+        RECOVERY{Health Check SQL}
+        RECOVERY -- "Sucesso" --> CSV_BK[Gera Backup CSV]
+        RECOVERY -- "Falha" --> FAILOVER[Ativa Failover]
+        FAILOVER -- "Nível 1" --> JSON_DATA
+        FAILOVER -- "Nível 2" --> CSV_BK
+    end
+
+    %% Interface e Saída
+    subgraph "assets/"
+        ASSETS_DIR[Diretório de Intercâmbio] --> JSON_DATA[data_sync.json]
+        ASSETS_DIR[Diretório de Intercâmbio] --> CSV_BK
+    end
+
+    subgraph "Interface (Apache/XAMPP)"
+        PHP_DASH(Dashboard PHP) -- "Consome JSON" --> JSON_DATA
+        PHP_DASH -- "Renderiza BI" --> CHARTJS[Chart.js / Tabela]
+    end
+
+    %% Orquestração
+    POWER_SHELL[[PS executar_pipeline.ps1]] -. "Gatilha ETL/ML" .-> PY_ETL
+
+    %% Estilização
+    classDef database fill:#f96,stroke:#333,stroke-width:2px;
+    classDef process fill:#69c,stroke:#333,stroke-width:1px,color:white;
+    classDef storage fill:#ff9,stroke:#333,stroke-width:1px;
+    classDef interface fill:#ccf,stroke:#333,stroke-width:1px;
+    classDef recovery fill:#f99,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5;
+
+    class DB database;
+    class PY_ETL,PY_ML,PY_JSON process;
+    class JSON_DATA,CSV_BK storage;
+    class PHP_DASH,CHARTJS interface;
+    class RECOVERY,FAILOVER recovery;
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
 3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
