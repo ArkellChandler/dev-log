@@ -2,7 +2,14 @@
 
 ![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
+# 🚀 Data Pipeline & Analytics - TOTVS Bootcamp
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+[![CI Status](https://github.com/ArkellChandler/dev-log/actions/workflows/main.yml/badge.svg)](https://github.com/ArkellChandler/dev-log/actions)
+
+> **Status:** 🟢 Pipeline Operacional | **Foco:** Resiliência e Integração de Dados (ETL)
 Repositório central para documentação e estudos técnicos focados em **Arquitetura de Dados**, **Machine Learning** e **Resiliência de Sistemas**.
 
 ---
