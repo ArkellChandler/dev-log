@@ -23,6 +23,7 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 - Repositório de estudos visuais (Mermaid/Markdown).
 - Fluxogramas de lógica e processos de dados.
 - Resumo técnico de Bancos NoSQL (MongoDB/Redis).
+- Guia de Processos ETL (Extração/Transformação).
 
 ### 📁 [assets](assets)
 - **Ferramentas de Automação:**
