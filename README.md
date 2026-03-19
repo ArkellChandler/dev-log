@@ -2,53 +2,33 @@
 
 Repositório central para documentação, scripts e estudos técnicos focados em **Integração de Sistemas**, **Backend** e **Bancos de Dados Relacionais**.
 
+## 🌐 Open Source & Comunidade
+* **DIO (Digital Innovation One):** Integrante ativo no ecossistema de aprendizado e projetos de código aberto.
+* **Foco:** Desenvolvimento de soluções escaláveis, integração de dados e arquitetura de sistemas.
+
 ## 📂 Estrutura do Repositório
 
-### 📁 [redes](redes)
-- Estudos de infraestrutura da internet.
-- Arquitetura de Redes (Borda e Núcleo), Hierarquia de ISPs e Métricas (Atraso/Vazão).
+### 🏗️ Engenharia e Integração de Dados
+* **📁 [etl](etl):** Guia completo de processos de Extração, Transformação e Carga (ETL) e conceitos de Data Warehouse (DW).
+* **📁 [sql](sql) / [05_SQL](05_SQL) / [06_MySQL](06_MySQL):** Modelagem de dados, consultas complexas e scripts de automação para MySQL e MariaDB.
+* **📁 [nosql](nosql):** Implementações e documentação para bancos não relacionais (MongoDB e Redis).
 
-### 📁 [sql](sql)
-- Fundamentos de SQL e Bancos de Dados Relacionais.
-- Modelagem de dados e consultas complexas.
+### 📊 Análise e Machine Learning
+* **📁 [pandas](pandas):** Manipulação de dados com Pandas e Polars, explorando a relação entre SQL e DataFrames.
+* **📁 [machine_learning](machine_learning):** Modelos preditivos utilizando Scikit-learn (Regressão e Classificação).
 
-### 📁 [nosql](nosql)
-- Teoria NoSQL e bancos de dados não relacionais.
-- Documentação específica para **MongoDB** e **Redis**.
-
-### 📁 [pandas](pandas)
-- Estudos teóricos da biblioteca Pandas e Polars.
-- Introdução a DataFrames e Series.
-- **Ponte SQL-Pandas:** Relação entre Teoria dos Conjuntos e DataFrames.
-
-### 📁 [etl](etl)
-- Guia de processos de Extração, Transformação e Carga (ETL).
-- Conceitos de Data Warehouse (DW).
-
-### 📁 [machine_learning](machine_learning)
-- Introdução teórica ao **Scikit-learn** (sklearn).
-- Definição de Regressão, Classificação e Agrupamento.
-
-### 📁 [05_SQL](05_SQL) / [06_MySQL](06_MySQL)
-- Scripts e desafios práticos de bancos de dados.
-
-### 📁 [bootcamp-TOTVS](bootcamp-TOTVS)
-- Projetos e exercícios de lógica de programação.
-
-### 📁 [assets](assets)
-- Documentação visual e ferramentas de automação.
+### 🌐 Infraestrutura e Backend
+* **📁 [redes](redes):** Arquitetura de redes, ISPs e métricas de performance (vazão e latência).
+* **📁 [bootcamp-TOTVS](bootcamp-TOTVS):** Exercícios de lógica e projetos desenvolvidos em trilhas de especialização.
+* **📁 [assets](assets):** Documentação visual e ferramentas de automação do repositório.
 
 ## 🛠️ Stack Tecnológica
-- **Linguagens:** Python 3.x, PHP 8.x
-- **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
-- **Servidores:** Apache (XAMPP)
-- **Ferramentas:** Git, VS Code, phpMyAdmin, Gemini API
+* **Linguagens:** Python 3.x, PHP 8.x, PowerShell
+* **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
+* **Servidores:** Apache (XAMPP)
+* **Ferramentas:** Git, VS Code, Gemini 3 API, phpMyAdmin
 
-## 🚀 Como Executar as Ferramentas
-Para gerar o fluxograma de arquitetura atualizado:
+## 🚀 Automação
+Para atualizar os fluxogramas de arquitetura do repositório:
 ```powershell
 python assets/gerador_fluxograma.py
-```
-
----
-*Este repositório serve como portfólio técnico e registro de evolução contínua.*
