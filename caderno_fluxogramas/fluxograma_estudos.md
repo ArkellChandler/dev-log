@@ -101,4 +101,31 @@ Se você tem uma rede com **$N$** roteadores entre a origem e o destino, você t
 *   **Latência (ms):** É a "velocidade de resposta". Se for alta, a ação demora a acontecer.
 *   **Vazão (Throughput):** É a "largura do cano". Se for baixa, arquivos grandes demoram a baixar.
 
+---
 
+## 12. Teoria dos Conjuntos (SQL e Pandas)
+
+O SQL e o Pandas são baseados em operações matemáticas entre conjuntos de dados.
+
+```mermaid
+graph TD
+    subgraph Operacoes_SQL
+        A[Tabela A] --- B[Tabela B]
+        A ---|INNER JOIN| AB[Intersecção: A ∩ B]
+        A ---|LEFT JOIN| AL[A + Parte de B]
+        A ---|UNION| AU[União Total: A ∪ B]
+    end
+
+    subgraph Operacoes_Pandas
+        df1[DataFrame 1] --- df2[DataFrame 2]
+        df1 ---|pd.merge| dfM[Resultado Unificado]
+    end
+```
+
+### Glossário Técnico de Conjuntos:
+
+1.  **Intersecção (INNER JOIN):** Retorna apenas o que as duas fontes têm em comum.
+2.  **Diferença (LEFT JOIN com Filtro):** Retorna o que existe em A mas não existe em B.
+3.  **União (UNION):** Combina dois conjuntos verticalmente (colocando um embaixo do outro).
+
+---
