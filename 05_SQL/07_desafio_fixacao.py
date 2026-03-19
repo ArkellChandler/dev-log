@@ -1,6 +1,7 @@
 import sqlite3
+import os
 
-db_path = r'C:\Users\User\dev-log\05_SQL\estudos.db'
+db_path = os.path.join(os.path.dirname(__file__), 'estudos.db')
 
 def auditor_de_notas():
     try:

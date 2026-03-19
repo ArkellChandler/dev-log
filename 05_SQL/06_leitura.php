@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Caminho absoluto para o banco de dados
-$caminhoBanco = 'C:\Users\User\dev-log\05_SQL\estudos.db';
+$caminhoBanco = __DIR__ . '/estudos.db';
 
 // Conectar ao banco SQLite3
 $db = new SQLite3($caminhoBanco);

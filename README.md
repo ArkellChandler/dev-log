@@ -1,27 +1,41 @@
-# Dev-Log: Jornada de Integração de Sistemas e Dados
+# Dev-Log: Engenharia de Dados e Backend
 
-Este repositório documenta meu progresso técnico no desenvolvimento de soluções integradas utilizando Python, PHP e Bancos de Dados Relacionais (SQL). O objetivo é construir uma base sólida em engenharia de dados e desenvolvimento web.
+Repositório central para documentação, scripts e estudos técnicos focados em **Integração de Sistemas**, **Backend** e **Bancos de Dados Relacionais**.
 
-## 🛠️ Tecnologias e Ferramentas
+## 📂 Estrutura do Repositório
 
+### 📁 [05_SQL](05_SQL)
+- Estudos de sintaxe SQL avançada.
+- Modelagem de dados (MER/DER).
+- Scripts de consultas complexas e otimização.
+
+### 📁 [06_MySQL](06_MySQL)
+- Implementação de conexões web utilizando **PHP 8.x**.
+- Integração de servidores **Apache** e **MySQL** (Ambiente XAMPP).
+- Scripts básicos de interface web (HTML/PHP).
+
+### 📁 [bootcamp-TOTVS](bootcamp-TOTVS)
+- Projetos e exercícios de lógica de programação.
+- Analisadores de dados e simuladores de log em Python.
+- Registro de evolução durante o treinamento oficial.
+
+### 📁 [assets](assets)
+- **Ferramentas de Automação:**
+  - `gerador_fluxograma.py`: Script para visualização da arquitetura do projeto.
+  - `gerador_estudos_ia.py`: Integração com Gemini API para geração de resumos técnicos.
+- **Documentação Visual:** Fluxogramas, diagramas e referências técnicas.
+
+## 🛠️ Stack Tecnológica
 - **Linguagens:** Python 3.x, PHP 8.x
-- **Bancos de Dados:** SQLite (Arquivos locais), MySQL/MariaDB (Ambiente XAMPP)
-- **Ferramentas de Desenvolvimento:** Git, phpMyAdmin, Apache Server
-- **Arquitetura:** Modelagem MER/DER, CRUD Operations, Integração via CLI e Web
+- **Bancos de Dados:** MySQL, MariaDB, SQLite
+- **Servidores:** Apache (XAMPP)
+- **Ferramentas:** Git, VS Code, phpMyAdmin, Gemini API
 
-## 📂 Estrutura do Projeto
-
-- **`/05_SQL`**: Estudos de sintaxe SQL, consultas avançadas (JOINs, Filtros) e scripts de integração com Python/PHP.
-- **`/06_MySQL`**: Implementação de conexões Web em ambiente de servidor local utilizando o driver `mysqli`.
-- **`/assets`**: Documentação técnica, resumos de progresso e fluxogramas de arquitetura do sistema.
-- **`/bootcamp-TOTVS`**: Estudos específicos de lógica de programação e projetos realizados durante o bootcamp.
-
-## 🚀 Competências Desenvolvidas
-
-1. **Modelagem de Dados:** Criação de estruturas relacionais robustas (Primary/Foreign Keys).
-2. **Integração de Sistemas:** Scripts Python para processamento de dados e PHP para exibição dinâmica em ambiente Web.
-3. **Automação de Processos:** Manipulação de bancos de dados via terminal e scripts automatizados.
-4. **Versionamento Profissional:** Gerenciamento de fluxo de trabalho com Git.
+## 🚀 Como Executar as Ferramentas
+Para gerar o fluxograma de arquitetura atualizado:
+```powershell
+python assets/gerador_fluxograma.py
+```
 
 ---
-*Repositório mantido por [Seu Nome]*
+*Este repositório serve como portfólio técnico e registro de evolução contínua.*

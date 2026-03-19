@@ -1,7 +1,8 @@
 import sqlite3
+import os
 
 # Caminho para o banco de dados
-db_path = r'C:\Users\User\dev-log\05_SQL\estudos.db'
+db_path = os.path.join(os.path.dirname(__file__), 'estudos.db')
 
 try:
     # 1. Conectar ao banco de dados
