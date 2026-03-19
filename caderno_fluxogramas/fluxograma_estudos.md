@@ -56,5 +56,4 @@ Se você tem uma rede com **$N$** roteadores entre a origem e o destino, você t
 *   **Latência (ms):** É a "velocidade de resposta". Se for alta, a ação demora a acontecer.
 *   **Vazão (Throughput):** É a "largura do cano". Se for baixa, arquivos grandes demoram a baixar.
 
----
-*Organizado por Gemini CLI*
+
