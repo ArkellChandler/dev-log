@@ -25,6 +25,10 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 - Guia de processos de Extração, Transformação e Carga (ETL).
 - Conceitos de Data Warehouse (DW).
 
+### 📁 [machine_learning](machine_learning)
+- Introdução teórica ao **Scikit-learn** (sklearn).
+- Definição de Regressão, Classificação e Agrupamento.
+
 ### 📁 [05_SQL](05_SQL) / [06_MySQL](06_MySQL)
 - Scripts e desafios práticos de bancos de dados.
 
