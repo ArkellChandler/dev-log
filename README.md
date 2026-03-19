@@ -19,6 +19,10 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 - Analisadores de dados e simuladores de log em Python.
 - Registro de evolução durante o treinamento oficial.
 
+### 📁 [caderno_fluxogramas](caderno_fluxogramas)
+- Repositório de estudos visuais (Mermaid/Markdown).
+- Fluxogramas de lógica e processos de dados.
+
 ### 📁 [assets](assets)
 - **Ferramentas de Automação:**
   - `gerador_fluxograma.py`: Script para visualização da arquitetura do projeto.
