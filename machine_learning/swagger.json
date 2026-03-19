@@ -1,0 +1,38 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Dev-Log Data API",
+    "description": "Documentação da Pipeline de Integração: SQL -> Python -> PHP",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/assets/data_sync.json": {
+      "get": {
+        "summary": "Obter dados processados",
+        "description": "Retorna a lista de produtos com impostos calculados pelo Pandas e predições do Scikit-Learn.",
+        "responses": {
+          "200": {
+            "description": "Lista de vendas sincronizada com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "integer" },
+                      "produto": { "type": "string" },
+                      "valor": { "type": "number" },
+                      "valor_taxado": { "type": "number" },
+                      "data_venda": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
