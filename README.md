@@ -4,37 +4,39 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 
 ## 📂 Estrutura do Repositório
 
-### 📁 [05_SQL](05_SQL)
-- Estudos de sintaxe SQL avançada.
-- Modelagem de dados (MER/DER).
-- Scripts de consultas complexas e otimização.
+### 📁 [redes](redes)
+- Estudos de infraestrutura da internet.
+- Arquitetura de Redes (Borda e Núcleo), Hierarquia de ISPs e Métricas (Atraso/Vazão).
 
-### 📁 [06_MySQL](06_MySQL)
-- Implementação de conexões web utilizando **PHP 8.x**.
-- Integração de servidores **Apache** e **MySQL** (Ambiente XAMPP).
-- Scripts básicos de interface web (HTML/PHP).
+### 📁 [sql](sql)
+- Fundamentos de SQL e Bancos de Dados Relacionais.
+- Modelagem de dados e consultas complexas.
+
+### 📁 [nosql](nosql)
+- Teoria NoSQL e bancos de dados não relacionais.
+- Documentação específica para **MongoDB** e **Redis**.
+
+### 📁 [pandas](pandas)
+- Estudos teóricos da biblioteca Pandas e Polars.
+- Introdução a DataFrames e Series.
+- **Ponte SQL-Pandas:** Relação entre Teoria dos Conjuntos e DataFrames.
+
+### 📁 [etl](etl)
+- Guia de processos de Extração, Transformação e Carga (ETL).
+- Conceitos de Data Warehouse (DW).
+
+### 📁 [05_SQL](05_SQL) / [06_MySQL](06_MySQL)
+- Scripts e desafios práticos de bancos de dados.
 
 ### 📁 [bootcamp-TOTVS](bootcamp-TOTVS)
 - Projetos e exercícios de lógica de programação.
-- Analisadores de dados e simuladores de log em Python.
-- Registro de evolução durante o treinamento oficial.
-
-### 📁 [caderno_fluxogramas](caderno_fluxogramas)
-- Repositório de estudos visuais (Mermaid/Markdown).
-- Fluxogramas de lógica e processos de dados.
-- Resumo técnico de Bancos NoSQL (MongoDB/Redis).
-- Guia de Processos ETL (Extração/Transformação).
-- Introdução Técnica à Biblioteca Pandas (DataFrames).
 
 ### 📁 [assets](assets)
-- **Ferramentas de Automação:**
-  - `gerador_fluxograma.py`: Script para visualização da arquitetura do projeto.
-  - `gerador_estudos_ia.py`: Integração com Gemini API para geração de resumos técnicos.
-- **Documentação Visual:** Fluxogramas, diagramas e referências técnicas.
+- Documentação visual e ferramentas de automação.
 
 ## 🛠️ Stack Tecnológica
 - **Linguagens:** Python 3.x, PHP 8.x
-- **Bancos de Dados:** MySQL, MariaDB, SQLite
+- **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
 - **Servidores:** Apache (XAMPP)
 - **Ferramentas:** Git, VS Code, phpMyAdmin, Gemini API
 

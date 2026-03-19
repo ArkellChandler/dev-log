@@ -1,17 +1,8 @@
-# Caderno de Fluxogramas: Engenharia de Dados
+# Estudos de Arquitetura de Redes
 
-Este diretório contém diagramas e fluxogramas para auxiliar na visualização de processos técnicos.
+Este documento contém a base teórica e visual sobre a infraestrutura da internet.
 
-## 01. Ciclo de Estudo SQL
-```mermaid
-graph TD
-    A[Sintaxe Básica] --> B[Consultas JOIN]
-    B --> C[Modelagem de Dados]
-    C --> D[Otimização de Queries]
-    D --> A
-```
-
-## 02. Arquitetura de Redes: A Borda e o Núcleo
+## 01. Arquitetura de Redes: A Borda e o Núcleo
 
 Este fluxograma divide a internet em suas partes físicas e lógicas fundamentais.
 
@@ -56,7 +47,7 @@ graph TD
 5.  **ISP (Internet Service Provider):** É a empresa (ex: Vivo, Claro) que te fornece acesso. Elas são organizadas em hierarquia (locais se conectam a regionais, que se conectam a globais).
 6.  **IXP (Internet Exchange Point):** É um local físico onde diferentes ISPs se encontram para trocar dados diretamente entre si, tornando o tráfego mais rápido e barato.
 
-## 03. Hierarquia de ISPs (Provedores)
+## 02. Hierarquia de ISPs (Provedores)
 
 A internet é uma "rede de redes". Elas se organizam em níveis (Tiers) baseados em sua abrangência.
 
@@ -74,7 +65,7 @@ graph TD
     end
 ```
 
-## 04. Atrasos, Perda e Vazão (Métricas de Performance)
+## 03. Atrasos, Perda e Vazão (Métricas de Performance)
 
 ### Tipos de Atraso (Delay)
 O atraso total de um pacote em um nó (roteador) é a soma de 4 componentes:
@@ -100,32 +91,3 @@ Se você tem uma rede com **$N$** roteadores entre a origem e o destino, você t
 **Conceitos Importantes:**
 *   **Latência (ms):** É a "velocidade de resposta". Se for alta, a ação demora a acontecer.
 *   **Vazão (Throughput):** É a "largura do cano". Se for baixa, arquivos grandes demoram a baixar.
-
----
-
-## 12. Teoria dos Conjuntos (SQL e Pandas)
-
-O SQL e o Pandas são baseados em operações matemáticas entre conjuntos de dados.
-
-```mermaid
-graph TD
-    subgraph Operacoes_SQL
-        A[Tabela A] --- B[Tabela B]
-        A ---|INNER JOIN| AB[Intersecção: A ∩ B]
-        A ---|LEFT JOIN| AL[A + Parte de B]
-        A ---|UNION| AU[União Total: A ∪ B]
-    end
-
-    subgraph Operacoes_Pandas
-        df1[DataFrame 1] --- df2[DataFrame 2]
-        df1 ---|pd.merge| dfM[Resultado Unificado]
-    end
-```
-
-### Glossário Técnico de Conjuntos:
-
-1.  **Intersecção (INNER JOIN):** Retorna apenas o que as duas fontes têm em comum.
-2.  **Diferença (LEFT JOIN com Filtro):** Retorna o que existe em A mas não existe em B.
-3.  **União (UNION):** Combina dois conjuntos verticalmente (colocando um embaixo do outro).
-
----
