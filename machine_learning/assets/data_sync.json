@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "produto":"Placa de V\u00eddeo RTX",
+        "valor":3500.0,
+        "data_venda":"2026-03-19 04:17:43",
+        "status_sync":"pendente",
+        "valor_taxado":3850.0
+    },
+    {
+        "id":2,
+        "produto":"Processador Ryzen 7",
+        "valor":1800.5,
+        "data_venda":"2026-03-19 04:17:43",
+        "status_sync":"pendente",
+        "valor_taxado":1980.55
+    },
+    {
+        "id":3,
+        "produto":"Mem\u00f3ria RAM 16GB",
+        "valor":450.0,
+        "data_venda":"2026-03-19 04:17:43",
+        "status_sync":"pendente",
+        "valor_taxado":495.0
+    },
+    {
+        "id":4,
+        "produto":"SSD NVMe 1TB",
+        "valor":620.0,
+        "data_venda":"2026-03-19 04:17:43",
+        "status_sync":"pendente",
+        "valor_taxado":682.0
+    }
+]
