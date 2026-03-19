@@ -16,26 +16,27 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 
 ```mermaid
 graph LR
-    subgraph Origem
+    subgraph "Origem"
         A[(MySQL)] 
     end
 
-    subgraph Processamento
+    subgraph "Processamento"
         B[Python ETL] --> C[Scikit-Learn]
     end
 
-    subgraph Entrega
+    subgraph "Entrega"
         D[swagger.json] --> E[Dashboard PHP]
         E --> F[Chart.js]
     end
 
     A --> B
     C --> D
-    
-    style A fill:#f96
-    style B fill:#69c
-    style C fill:#69c
-    style E fill:#ccf
+
+    %% Estilização (Separada por quebras de linha para evitar erros)
+    style A fill:#f96,stroke:#333
+    style B fill:#69c,stroke:#333,color:#fff
+    style C fill:#69c,stroke:#333,color:#fff
+    style E fill:#ccf,stroke:#333
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
 3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
