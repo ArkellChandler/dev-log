@@ -1,9 +1,7 @@
-# 🚀 Dev-Log: Engenharia de Dados & Integração
+# 🚀 Dev-Log: Engenharia de Dados & Integração |  Data Pipeline & Analytics - TOTVS Bootcamp
 
 ![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
-# 🚀 Data Pipeline & Analytics - TOTVS Bootcamp
-
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
