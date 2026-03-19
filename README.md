@@ -30,14 +30,14 @@ Para garantir a integração entre o motor de dados (Python) e a camada de visua
 
 Para facilitar a revisão técnica pela equipe da **TOTVS**, separei a documentação em três visões principais:
 
-#### 1. Endpoints e Métodos HTTP
-![Endpoints](./assets/swagger-endpoint-get.png)
+#### 1. Visão Geral
+![Swagger Main](./machine_learning/assets/swagger-info.png)
 
-#### 2. Modelos de Dados (Schemas)
-![Schemas](./assets/swagger-schemas.png)
+#### 2. Endpoints e Métodos
+![Swagger Endpoints](./machine_learning/assets/swagger-endpoint-get.png)
 
-#### 3. Informações Gerais e Servidores
-![Info](./assets/swagger-info.png) Para uma experiência interativa, copie o conteúdo do JSON e cole no [Swagger Editor](https://editor.swagger.io/).
+#### 3. Esquemas de Dados
+![Swagger Schemas](./machine_learning/assets/swagger-schemas.png)
 
 ---
 
