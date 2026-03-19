@@ -1,0 +1,20 @@
+name: CI - Verificação de Dados
+on: [push] # Roda toda vez que você der 'git push'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validar JSON do Swagger
+      run: |
+        # Verifica se o arquivo JSON está bem formatado
+        cat machine_learning/swagger.json | python3 -m json.tool > /dev/null
+        echo "✅ Swagger JSON está íntegro!"
+
+    - name: Check de Sintaxe Python
+      run: |
+        # Verifica se o script ETL tem erros básicos de sintaxe
+        python3 -m py_compile machine_learning/sync_data.py
+        echo "✅ Código Python está pronto para rodar!"
