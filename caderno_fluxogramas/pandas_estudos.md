@@ -23,21 +23,43 @@ graph TD
 | **Series** | É a **coluna física** onde os dados ficam guardados. | Um DataFrame é um conjunto de várias Series. |
 | **Dtype (Data Type)** | É o **tipo de dado** (Inteiro, Texto, Float) dentro da coluna. | Cada Series pode ter apenas **um único** tipo de dado. |
 
-**Alerta de Performance:** Se você misturar um texto em uma coluna de números, o Pandas mudará o **Dtype** de toda a **Series** para `object` (texto), o que impedirá a realização de cálculos matemáticos.
+## 14. Series vs DataFrame: A Diferença de Dimensão
 
-## 14. Comandos Essenciais (O Martelo)
+*   **Series (Unidimensional):** É apenas **uma coluna**. Não possui colunas irmãs. Se você extrair uma única coluna de uma tabela, você tem uma Series.
+*   **DataFrame (Bidimensional):** É a **tabela completa** (Linhas e Colunas). Permite operações entre diferentes colunas (ex: somar Coluna A com Coluna B).
 
-| Função | O que faz (Literal) | Equivalente SQL |
-| :--- | :--- | :--- |
-| `pd.read_csv()` | Lê um arquivo e cria um DataFrame. | `FROM arquivo.csv` |
-| `df.head()` | Mostra as primeiras 5 linhas. | `LIMIT 5` |
-| `df['coluna']` | Seleciona uma coluna específica (Series). | `SELECT coluna` |
-| `df[df['valor'] > 10]` | Filtra linhas baseadas em uma condição. | `WHERE valor > 10` |
-| `df.groupby()` | Agrupa dados para cálculos. | `GROUP BY` |
-| `df.merge()` | Une dois DataFrames. | `JOIN` |
+---
 
-### Limites e Riscos do Pandas:
-1. **Memória RAM:** O Pandas carrega **todo** o arquivo na memória. Se o arquivo for maior que a sua memória RAM (ex: 16GB), o computador vai travar.
-2. **Tipagem:** O Pandas tenta adivinhar o tipo de dado (Número ou Texto). Se ele errar, os cálculos matemáticos falharão.
+## 15. O Ecossistema: Pandas vs Polars
+
+Embora o Pandas seja o padrão, existe uma biblioteca moderna chamada **Polars**.
+
+*   **Pandas:** Carrega tudo na RAM, é mais antigo e amplamente documentado.
+*   **Polars:** Escrito em Rust, é muito mais rápido e eficiente com grandes volumes de dados (GigaBytes), pois usa processamento paralelo.
+
+---
+
+## 16. Kit de Ferramentas: Comandos de Verificação e Análise
+
+Estes comandos são essenciais para entender "o que tem dentro" do seu conjunto de dados antes de limpá-lo.
+
+### Verificação de Estrutura
+*   **`df.info()`**: Mostra o resumo da tabela: nomes das colunas, quantos valores não são nulos e o tipo de dado (Dtype) de cada uma.
+*   **`df.shape`**: Retorna uma tupla `(linhas, colunas)`. Ex: `(100, 5)` significa 100 linhas e 5 colunas.
+
+### Verificação de Conteúdo e Valores Únicos
+*   **`df.isnull().sum()`**: Soma quantos valores vazios (nulos) existem em cada coluna.
+*   **`df['coluna'].unique()`**: Lista quais são os valores diferentes que existem naquela coluna (sem repetir).
+*   **`df['coluna'].nunique()`**: Conta a quantidade de valores únicos existentes.
+
+### Alterações e Limpeza
+*   **`df.rename(columns={'antigo': 'novo'})`**: Muda o nome das colunas.
+*   **`df.drop(columns=['nome'])`**: Exclui uma coluna inteira que não é necessária.
+
+### Estatística e Agrupamento
+*   **`df.describe()`**: Gera um relatório automático com média, valor mínimo, valor máximo e desvio padrão de todas as colunas numéricas.
+*   **`df.groupby('coluna').sum()`**: Agrupa os dados por uma categoria e soma os valores (Equivalente ao `GROUP BY` do SQL).
+
+**Limite Técnico:** Operações estatísticas como `.mean()` (média) ou `.sum()` (soma) só funcionam em colunas cujo **Dtype** seja numérico (`int` ou `float`).
 
 ---
