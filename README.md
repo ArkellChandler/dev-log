@@ -24,6 +24,7 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 - Fluxogramas de lógica e processos de dados.
 - Resumo técnico de Bancos NoSQL (MongoDB/Redis).
 - Guia de Processos ETL (Extração/Transformação).
+- Introdução Técnica à Biblioteca Pandas (DataFrames).
 
 ### 📁 [assets](assets)
 - **Ferramentas de Automação:**
