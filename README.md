@@ -1,38 +1,48 @@
-# # Dev-Log: Engenharia de Dados e Backend
+# # Dev-Log: Engenharia de Dados & Backend
 
 ![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-success?style=for-the-badge)
 
-Repositório central para documentação, scripts e estudos técnicos focados em **Integração de Sistemas**, **Backend** e **Bancos de Dados Relacionais**.
+Repositório central para documentação e estudos técnicos focados em **Integração de Sistemas**, **Arquitetura de Dados** e **Backend**.
 
 ---
 
-## 🌐 Open Source & Comunidade
-* **DIO (Digital Innovation One):** Integrante ativo no ecossistema de aprendizado e projetos de código aberto.
-* **Foco:** Desenvolvimento de soluções escaláveis, integração de dados e arquitetura de sistemas distribuídos.
+## 🚀 Projeto de Destaque: Pipeline ETL & Analytics Híbrido
+Este repositório contém uma implementação completa de um fluxo de dados (ETL) integrando múltiplas tecnologias para resolver um cenário real de sincronização de dados.
+
+### 🏗️ Arquitetura da Solução
+1.  **Camada de Persistência:** MySQL (MariaDB) via XAMPP atuando como banco transacional (ERP).
+2.  **Engine de ETL:** Python + Pandas para extração, limpeza e tipagem de dados.
+3.  **Inteligência de Dados:** Scikit-Learn para modelagem e predição de margens sobre os dados brutos.
+4.  **Camada de Integração:** Exportação estruturada em JSON para garantir o desacoplamento entre o Backend e o Processamento.
+5.  **Interface de Analytics:** Dashboard em PHP com visualização gráfica via Chart.js, consumindo dados processados em tempo real.
+
+---
 
 ## 📂 Estrutura do Repositório
 
-### 🏗️ Engenharia e Integração de Dados
-* **📁 [etl](etl):** Guia completo de processos de Extração, Transformação e Carga (ETL) e conceitos de Data Warehouse (DW).
-* **📁 [sql](sql) / [05_SQL](05_SQL) / [06_MySQL](06_MySQL):** Modelagem de dados, consultas complexas e scripts de automação para MySQL e MariaDB.
-* **📁 [nosql](nosql):** Implementações e documentação para bancos não relacionais (MongoDB e Redis).
+### 📁 [machine_learning](machine_learning)
+* **`sync_data.py`**: Maestro do pipeline (SQL -> Pandas -> ML -> JSON).
+* **`dashboard.php`**: Interface de visualização de BI.
+* **`executar_pipeline.ps1`**: Script de automação e orquestração para Windows 11.
+* **📁 [assets](assets)**: Armazenamento de arquivos de intercâmbio (JSON) e documentação visual.
 
-### 📊 Análise e Machine Learning
-* **📁 [pandas](pandas):** Manipulação de dados com Pandas e Polars, explorando a relação entre SQL e DataFrames.
-* **📁 [machine_learning](machine_learning):** Modelos preditivos utilizando Scikit-learn (Regressão e Classificação).
+### 📁 [sql](sql) / [06_MySQL](06_MySQL)
+* Modelagem de bancos relacionais e scripts de setup (`setup_db.sql`).
 
-### 🌐 Infraestrutura e Backend
-* **📁 [redes](redes):** Arquitetura de redes, ISPs e métricas de performance (vazão e latência).
-* **📁 [bootcamp-TOTVS](bootcamp-TOTVS):** Exercícios de lógica e projetos desenvolvidos em trilhas de especialização.
-* **📁 [assets](assets):** Documentação visual e ferramentas de automação do repositório.
+### 📁 [etl](etl) / [pandas](pandas)
+* Estudos aprofundados sobre processos de Extração, Transformação e Carga.
+
+---
 
 ## 🛠️ Stack Tecnológica
-* **Linguagens:** Python 3.x, PHP 8.x, PowerShell
+* **Linguagens:** Python 3.x, PHP 8.x, PowerShell, JavaScript
 * **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
-* **Servidores:** Apache (XAMPP)
-* **Ferramentas:** Git, VS Code, phpMyAdmin, Terminal Linux (Debian)
+* **Ferramentas de Infra:** Git, VS Code, XAMPP, Terminal Linux (Debian)
+* **Bibliotecas:** Pandas, Scikit-Learn, Matplotlib, Chart.js
 
-## 🚀 Automação
-Para atualizar os fluxogramas de arquitetura do repositório:
-```powershell
-python assets/gerador_fluxograma.py
+## 🌐 Open Source & Comunidade
+* **DIO (Digital Innovation One):** Participação ativa em projetos e ecossistemas de aprendizado open source.
+
+---
+*Este repositório serve como portfólio técnico e registro de evolução contínua em Engenharia de Dados.*
