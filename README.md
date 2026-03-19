@@ -14,23 +14,6 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 ### 🛠️ Arquitetura da Solução
 ### 🔄 Fluxo de Dados e Arquitetura
 
-### 🔄 Fluxograma da Arquitetura
-
-```mermaid
-graph TD
-    A[(MySQL - XAMPP)] --> B(Python ETL)
-    B --> C(Machine Learning)
-    C --> D{JSON Data}
-    D --> E[Dashboard PHP]
-    D --> F[Swagger Docs]
-    B -.-> G[Backup CSV]
-
-    style A fill:#f96
-    style B fill:#69c
-    style D fill:#fff
-    style E fill:#ccf
-    style F fill:#85ea2d
-
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
 3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
