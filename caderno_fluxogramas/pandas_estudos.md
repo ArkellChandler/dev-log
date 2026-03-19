@@ -16,6 +16,15 @@ graph TD
     end
 ```
 
+### Diferença entre Series (Estrutura) e Dtype (Conteúdo)
+
+| Conceito | Definição Literal | Limite Técnico |
+| :--- | :--- | :--- |
+| **Series** | É a **coluna física** onde os dados ficam guardados. | Um DataFrame é um conjunto de várias Series. |
+| **Dtype (Data Type)** | É o **tipo de dado** (Inteiro, Texto, Float) dentro da coluna. | Cada Series pode ter apenas **um único** tipo de dado. |
+
+**Alerta de Performance:** Se você misturar um texto em uma coluna de números, o Pandas mudará o **Dtype** de toda a **Series** para `object` (texto), o que impedirá a realização de cálculos matemáticos.
+
 ## 14. Comandos Essenciais (O Martelo)
 
 | Função | O que faz (Literal) | Equivalente SQL |
