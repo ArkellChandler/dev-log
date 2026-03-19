@@ -1,3 +1,4 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkellChandler/dev-log/blob/main/machine_learning/notebook_entrega.ipynb)
 # 🚀 Dev-Log: Engenharia de Dados & Integração |  Data Pipeline & Analytics - TOTVS Bootcamp
 
 ![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
