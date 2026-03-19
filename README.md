@@ -13,6 +13,7 @@ Este projeto demonstra um fluxo completo de dados, desde a extração em um banc
 
 ### 🛠️ Arquitetura da Solução
 ### 🔄 Fluxo de Dados e Arquitetura
+```mermaid
 graph TD
     %% Nós de Dados
     A[(MySQL - XAMPP)] -->|Extração SQL| B(Python ETL - Pandas)
