@@ -1,48 +1,54 @@
-# # Dev-Log: Engenharia de Dados & Backend
+# 🚀 Dev-Log: Engenharia de Dados & Integração
 
 ![DIO](https://img.shields.io/badge/DIO-Open%20Source-ee4d2d?style=for-the-badge&logo=github&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
 
-Repositório central para documentação e estudos técnicos focados em **Integração de Sistemas**, **Arquitetura de Dados** e **Backend**.
-
----
-
-## 🚀 Projeto de Destaque: Pipeline ETL & Analytics Híbrido
-Este repositório contém uma implementação completa de um fluxo de dados (ETL) integrando múltiplas tecnologias para resolver um cenário real de sincronização de dados.
-
-### 🏗️ Arquitetura da Solução
-1.  **Camada de Persistência:** MySQL (MariaDB) via XAMPP atuando como banco transacional (ERP).
-2.  **Engine de ETL:** Python + Pandas para extração, limpeza e tipagem de dados.
-3.  **Inteligência de Dados:** Scikit-Learn para modelagem e predição de margens sobre os dados brutos.
-4.  **Camada de Integração:** Exportação estruturada em JSON para garantir o desacoplamento entre o Backend e o Processamento.
-5.  **Interface de Analytics:** Dashboard em PHP com visualização gráfica via Chart.js, consumindo dados processados em tempo real.
+Repositório central para documentação e estudos técnicos focados em **Arquitetura de Dados**, **Machine Learning** e **Resiliência de Sistemas**.
 
 ---
 
-## 📂 Estrutura do Repositório
+## 🏗️ Projeto de Destaque: Pipeline ETL & Analytics com Disaster Recovery
+
+Este projeto demonstra um fluxo completo de dados, desde a extração em um banco relacional até a visualização analítica, com camadas de segurança e recuperação.
+
+### 🛠️ Arquitetura da Solução
+1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
+2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
+3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
+4.  **Resiliência (Recovery):** Módulo de recuperação que alterna automaticamente entre SQL, JSON e CSV em caso de falha crítica.
+5.  **Interface de BI:** Dashboard dinâmico em PHP consumindo a ponte JSON e renderizando gráficos via **Chart.js**.
+
+---
+
+## 🛡️ Módulo de Recuperação (Disaster Recovery)
+O sistema conta com um gerenciador de integridade (`recovery_manager.py`) que opera em três níveis:
+- **Nível 1:** Conexão direta com a fonte SQL.
+- **Nível 2:** Failover para cache JSON estruturado.
+- **Nível 3:** Restauração via Backup CSV de emergência.
+
+
+
+---
+
+## 📂 Estrutura das Pastas
 
 ### 📁 [machine_learning](machine_learning)
-* **`sync_data.py`**: Maestro do pipeline (SQL -> Pandas -> ML -> JSON).
-* **`dashboard.php`**: Interface de visualização de BI.
-* **`executar_pipeline.ps1`**: Script de automação e orquestração para Windows 11.
-* **📁 [assets](assets)**: Armazenamento de arquivos de intercâmbio (JSON) e documentação visual.
+* **`sync_data.py`**: Script principal de integração e transformação.
+* **`recovery_manager.py`**: Sistema de monitoramento e recuperação de dados.
+* **`dashboard.php`**: Painel visual de acompanhamento.
+* **`executar_pipeline.ps1`**: Orquestrador em PowerShell para automação no Windows 11.
+* **📁 [assets](assets)**: Arquivos de intercâmbio (JSON/CSV) e logs.
 
-### 📁 [sql](sql) / [06_MySQL](06_MySQL)
-* Modelagem de bancos relacionais e scripts de setup (`setup_db.sql`).
-
-### 📁 [etl](etl) / [pandas](pandas)
-* Estudos aprofundados sobre processos de Extração, Transformação e Carga.
+### 📁 [sql](sql)
+* Scripts de definição de esquema e carga inicial de dados.
 
 ---
 
 ## 🛠️ Stack Tecnológica
-* **Linguagens:** Python 3.x, PHP 8.x, PowerShell, JavaScript
-* **Bancos de Dados:** MySQL, MariaDB, SQLite, MongoDB, Redis
-* **Ferramentas de Infra:** Git, VS Code, XAMPP, Terminal Linux (Debian)
-* **Bibliotecas:** Pandas, Scikit-Learn, Matplotlib, Chart.js
-
-## 🌐 Open Source & Comunidade
-* **DIO (Digital Innovation One):** Participação ativa em projetos e ecossistemas de aprendizado open source.
+- **Linguagens:** Python, PHP, PowerShell, SQL.
+- **Data Science:** Pandas, Scikit-Learn.
+- **Web/BI:** Apache, Chart.js, JSON.
+- **Ambiente:** Windows 11 / Debian (WSL).
 
 ---
-*Este repositório serve como portfólio técnico e registro de evolução contínua em Engenharia de Dados.*
+*Este repositório é um registro vivo de evolução técnica e boas práticas em Engenharia de Software.*
