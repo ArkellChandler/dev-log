@@ -22,6 +22,7 @@ Repositório central para documentação, scripts e estudos técnicos focados em
 ### 📁 [caderno_fluxogramas](caderno_fluxogramas)
 - Repositório de estudos visuais (Mermaid/Markdown).
 - Fluxogramas de lógica e processos de dados.
+- Resumo técnico de Bancos NoSQL (MongoDB/Redis).
 
 ### 📁 [assets](assets)
 - **Ferramentas de Automação:**
