@@ -32,11 +32,12 @@ graph LR
     A --> B
     C --> D
 
-    %% Estilização (Separada por quebras de linha para evitar erros)
+    %% Definição de Cores
     style A fill:#f96,stroke:#333
     style B fill:#69c,stroke:#333,color:#fff
     style C fill:#69c,stroke:#333,color:#fff
     style E fill:#ccf,stroke:#333
+
 1.  **Camada de Dados:** MySQL (MariaDB) via XAMPP atuando como a fonte transacional de origem.
 2.  **Processamento (ETL):** Script Python utilizando **Pandas** para limpeza, tipagem e transformação de dados.
 3.  **Machine Learning:** Integração com **Scikit-Learn** para geração de predições e métricas sobre os dados brutos.
