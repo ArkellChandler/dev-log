@@ -176,3 +176,43 @@ Tecnologias de Suporte:
 Virtualização: A tecnologia que permite "fatiar" um servidor físico em vários servidores virtuais.
 
 Containers (Docker): Permite que seu código rode igual em qualquer lugar (On-premise ou Nuvem).
+
+# 🌐 Infraestrutura Global e Serviços Core da AWS
+
+Este documento detalha como a AWS organiza sua infraestrutura física e lógica para garantir alta disponibilidade, baixa latência e provisionamento escalável.
+
+## 1. Fluxograma de Hierarquia e Entrega (Mermaid)
+
+```mermaid
+graph TD
+    %% Estilo
+    classDef global fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef regional fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    classDef compute fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px;
+
+    subgraph "Nível Global"
+        A[AWS Global Infrastructure] --> B[Regiões / Regions]
+        A --> C[Edge Locations / Pontos de Presença]
+    end
+
+    subgraph "Nível Regional (Alta Disponibilidade)"
+        B --> D[AZ 1 - Availability Zone]
+        B --> E[AZ 2 - Availability Zone]
+        D --- E
+    end
+
+    subgraph "Serviços de Borda (Edge)"
+        C --> C1[Route 53 - DNS]
+        C --> C2[CloudFront - CDN]
+    end
+
+    subgraph "Computação (Provisionamento)"
+        D --> F[EC2 - Máquinas Virtuais]
+        D --> G[ECS - Containers]
+    end
+
+    class A,C,C1,C2 global;
+    class B,D,E regional;
+    class F,G compute;
+
+2. Conceitos Geográficos (A "Casca" da AWS)🌍 Regiões e Mapa Mundi de DisponibilidadeUma Região é uma localidade física no mundo (ex: São Paulo, Virgínia). Cada região é isolada das outras para evitar que um desastre natural derrube a AWS inteira.🏢 Availability Zones (AZs) - O conceito de "Pelo menos duas"Dentro de uma Região, existem as AZs. Uma AZ é um ou mais Data Centers discretos.Regra de Ouro: Para um sistema ser considerado "Resiliente", ele deve rodar em pelo menos duas AZs. Se a AZ-1 inundar ou pegar fogo, a AZ-2 assume o tráfego instantaneamente.⚡ Edge Locations (Pontos de Presença)São centros de dados menores espalhados por centenas de cidades (incluindo Rio e SP). Eles não rodam servidores pesados, mas servem para:Route 53 (DNS): Resolver o nome do seu site (ex: www.seusite.com) o mais perto possível do usuário.CloudFront (CDN): Entregar imagens e vídeos rapidamente, "cacheando" o conteúdo perto de quem acessa.3. Serviços de Computação e ProvisionamentoProvisionar na AWS significa "alocar recursos sob demanda". Você não compra o hardware, você o "chama" via código ou console.ServiçoO que é?Analogia (Foco TEA)EC2 (Elastic Compute Cloud)Servidores Virtuais (VMs).É como alugar um computador inteiro (seu Lenovo T490 na nuvem). Você escolhe CPU e RAM.ECS (Elastic Container Service)Gerenciador de Containers (Docker).Em vez de alugar o computador, você aluga apenas "caixas" (apps) que rodam dentro dele.Lambda (Serverless)Execução de funções sem servidor.Você paga apenas pelos segundos que o seu código leva para rodar.4. Provedores e Modelos de ProvisionamentoOn-Demand: Pague pelo que usar (segundo a segundo). Ideal para testes.Reserved Instances: Você se compromete por 1 ou 3 anos e ganha até 70% de desconto.Spot Instances: Você usa a "sobra" de processamento da AWS por um preço baixíssimo, mas a AWS pode pedir o servidor de volta a qualquer momento.
