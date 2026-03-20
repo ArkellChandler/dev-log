@@ -98,3 +98,70 @@ graph TD
 - **Regiões:** Localidades geográficas isoladas (ex: São Paulo).
 - **AZs:** Conjuntos de Data Centers dentro de uma região. Para alta disponibilidade, use pelo menos duas AZs.
 - **Edge Locations:** Pontos de presença para entrega de conteúdo com baixa latência (CDN).
+
+---
+
+# 🛠️ AWS: Gerenciamento, IaC e Computação Elástica
+
+Este documento detalha as formas de interagir com a AWS e o ciclo de vida do serviço core de computação: EC2.
+
+---
+
+## 1. Interfaces de Interação e APIs (O Caminho do Comando)
+
+```mermaid
+graph LR
+    User[Usuário / Dev] --> Interface{Interface}
+    Interface -->|Visual| Console[AWS Management Console]
+    Interface -->|Terminal| CLI[AWS CLI]
+    Interface -->|Código| SDK[AWS SDK - Boto3/JS/Java]
+    
+    Console & CLI & SDK --> API[AWS Service APIs - HTTPS]
+    API --> Resources[Recursos AWS: EC2, S3, RDS]
+```
+
+**Teoria:**
+- **AWS Management Console:** Interface gráfica via navegador, ideal para aprendizado e tarefas visuais rápidas.
+- **AWS CLI:** Interface de linha de comando que permite automação via scripts e terminal.
+- **AWS SDK:** Bibliotecas de software (como o **Boto3** para Python) que permitem que o código interaja diretamente com os serviços AWS.
+- **Importante:** Todas as interfaces acima enviam requisições **HTTPS** para as **APIs** dos serviços AWS. A API é o ponto único de entrada para todas as ações na nuvem.
+
+---
+
+## 2. Provisionamento e IaC (Infraestrutura como Código)
+
+```mermaid
+graph TD
+    subgraph "Nível de Abstração"
+        EB[Elastic Beanstalk - PaaS]
+        CF[CloudFormation - IaC]
+    end
+
+    EB -->|Automatiza| Deploy[Deploy de App + Infra]
+    CF -->|Lê Arquivo| Template[JSON / YAML]
+    Template -->|Cria| Stack[Stack de Recursos]
+```
+
+**Teoria:**
+- **AWS CloudFormation:** É o serviço nativo de **Infraestrutura como Código (IaC)**. Você define todos os recursos (servidores, redes, bancos de dados) em um arquivo de texto (**YAML ou JSON**) chamado **Template**. Quando o CloudFormation lê esse template, ele cria uma **Stack** (conjunto) de recursos de forma automatizada e repetível.
+- **AWS Elastic Beanstalk:** Um serviço de **PaaS** que facilita o deploy de aplicações. Ele automatiza o provisionamento de infraestrutura (EC2, Load Balancers, Auto Scaling) baseado apenas no upload do seu código.
+
+---
+
+## 3. Amazon EC2: Ciclo de Vida e Instâncias
+
+```mermaid
+graph LR
+    AMI[AMI - Imagem] --> Launch[Lançamento]
+    Launch --> Running[Execução]
+    Running --> Stop[Parado - Disco mantido]
+    Stop --> Start[Reinício]
+    Running --> Terminate[Excluído - Tudo apagado]
+```
+
+**Teoria:**
+- **AMI (Amazon Machine Image):** É o "molde" ou imagem do sistema operacional (ex: Linux, Windows) que contém as configurações iniciais do servidor.
+- **Ciclo de Vida:**
+    - **Stop:** A instância para de rodar, mas o disco (**EBS**) continua armazenado. Você não paga pelo processamento, apenas pelo armazenamento do disco.
+    - **Start:** Reinicia uma instância parada, mantendo os dados salvos no disco.
+    - **Terminate:** A instância é excluída permanentemente. Por padrão, os volumes de disco associados também são deletados, e o ID da instância deixa de existir.
