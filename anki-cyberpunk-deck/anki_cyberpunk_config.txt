@@ -1,0 +1,150 @@
+
+//para teoria alternativa:
+//FRENTE
+
+<div class="cyber-container">
+  <div class="cyber-header">ANALYZING_THEORY...</div>
+  
+  <div class="question-box">
+    <span class="glitch-text">QUERY:</span> {{Question}}
+  </div>
+
+  <hr class="neon-line">
+
+  <div id="options">
+    <div class="opt-box"><span class="neon-label">A]</span> {{Correct Answer}}</div>
+    <div class="opt-box"><span class="neon-label">B]</span> {{Incorrect Answer 1}}</div>
+    <div class="opt-box"><span class="neon-label">C]</span> {{Incorrect Answer 2}}</div>
+  </div>
+</div>
+
+<script>
+  // Script para embaralhar as opções
+  var list = document.getElementById('options');
+  if (list) {
+    var nodes = Array.from(list.children);
+    for (var i = nodes.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      list.appendChild(nodes[j]);
+    }
+  }
+</script>
+
+//VERSO
+
+<div class="cyber-container">
+  <div class="cyber-header">DECRYPTION_SUCCESS</div>
+
+  <div class="question-box">
+    <span class="glitch-text">QUERY:</span> {{Question}}
+  </div>
+
+  <hr class="neon-line success">
+
+  <div class="answer-box">
+    <div class="cyber-header" style="color:#39ff14 !important">VALID_DATA_FOUND:</div>
+    <div class="result-text">{{Correct Answer}}</div>
+  </div>
+
+  {{#descricao}}
+  <div class="description-box">
+    <span class="glitch-text">LOG_DETAILS:</span>
+    <p>{{descricao}}</p>
+  </div>
+  {{/descricao}}
+</div>
+
+// CSS
+/* Configuração Geral do Card */
+.card {
+    background-color: #050505 !important;
+    margin: 0;
+    padding: 10px;
+    font-family: "Consolas", "Courier New", monospace !important;
+}
+
+.cyber-container {
+    border: 2px solid #00f3ff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    background-color: #050505 !important;
+    min-height: 200px;
+    display: block !important;
+}
+
+.cyber-header {
+    font-size: 12px;
+    color: #ff00ff !important;
+    text-shadow: 0 0 8px #ff00ff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.question-box {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #00f3ff !important;
+    display: block !important;
+}
+
+.glitch-text { color: #f3f315 !important; font-weight: bold; }
+
+.neon-line {
+    border: none; 
+    height: 2px; 
+    background-color: #00f3ff;
+    box-shadow: 0 0 10px #00f3ff; 
+    margin: 20px 0;
+}
+
+.neon-line.success { background-color: #39ff14; box-shadow: 0 0 10px #39ff14; }
+
+/* Alternativas */
+.opt-box {
+    background: #1a1a1a !important; 
+    border-left: 4px solid #00f3ff;
+    padding: 15px; 
+    margin-bottom: 12px; 
+    font-size: 18px;
+    color: #ffffff !important; /* Branco para melhor leitura */
+    text-align: left;
+}
+
+.neon-label { color: #ff00ff !important; font-weight: bold; margin-right: 10px; }
+
+/* Caixa de Resposta (Verso) */
+.answer-box {
+    background: #002200 !important; 
+    border: 1px solid #39ff14;
+    padding: 20px; 
+    margin: 15px 0;
+}
+
+.result-text { 
+    font-size: 26px; 
+    font-weight: bold; 
+    color: #39ff14 !important;
+    text-shadow: 0 0 10px #39ff14; 
+}
+
+/* Descrição */
+.description-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: #0d1a1a !important;
+    border-left: 3px solid #f3f315;
+    color: #00f3ff !important;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Ajuste para o campo de digitação (Sintaxe) */
+input#typeans {
+    background-color: #111 !important;
+    color: #39ff14 !important;
+    border: 1px solid #39ff14 !important;
+    font-family: monospace;
+}
+code { color: #f3f315; }

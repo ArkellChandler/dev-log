@@ -1,0 +1,11 @@
+﻿Question;Correct Answer;Incorrect Answer 1;Incorrect Answer 2;descricao
+Qual camada OSI é responsável pelo roteamento (IP)?;Rede (Camada 3);Transporte (Camada 4);Enlace (Camada 2);A camada de Rede determina o caminho do pacote entre hospedeiros (Datagramas).
+Qual a PDU da Camada 2 (Enlace)?;Quadro (Frame);Segmento;Pacote;O Quadro (Frame) contém o endereço físico (MAC) de origem e destino.
+O que define o Three-Way Handshake do TCP?;SYN -> SYN/ACK -> ACK;SYN -> ACK -> FIN;DATA -> ACK -> DATA;Processo de estabelecimento de conexão confiável antes do envio de dados.
+Qual dispositivo trabalha na Camada 2 (MAC)?;Switch;Roteador;Hub;O Switch L2 usa o endereço MAC para encaminhar quadros para a porta correta.
+No modelo OSI, qual camada lida com bits e sinais físicos?;Física (Camada 1);Aplicação (Camada 7);Sessão (Camada 5);Transforma bits em sinais elétricos, luz ou ondas de rádio.
+O que significa o 'A' de ACID em Banco de Dados?;Atomicidade;Disponibilidade;Acesso;Atomicidade garante que uma transação ocorra por inteiro ou não ocorra nada.
+Qual elemento do MER representa um Relacionamento?;Losango;Retângulo;Elipse;Retângulos são Entidades, Elipses são Atributos e Losangos são Relacionamentos.
+Qual comando SQL filtra grupos após um cálculo?;HAVING;WHERE;GROUP BY;O WHERE filtra linhas individuais; o HAVING filtra o resultado de agrupamentos.
+O que é um metadado?;Descrição da estrutura dos dados;O dado principal do usuário;Um backup de segurança;Dados sobre os dados, armazenados no Catálogo do SGBD.
+Qual a função do protocolo DHCP?;Atribuir IPs automaticamente;Traduzir nomes para IP;Criptografar a rede;O DHCP configura IP, Máscara, Gateway e DNS de forma dinâmica para os hosts.

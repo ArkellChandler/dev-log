@@ -1,0 +1,12 @@
+﻿Frente;Verso;descricao
+Como ver IP e MAC no Windows (PowerShell);ipconfig /all;Exibe todas as configurações de rede atuais e atualiza as configurações de DHCP e DNS.
+Testar conectividade e latência com um nó;ping <ip_ou_host>;Envia pacotes ICMP Echo Request para verificar se um dispositivo está acessível.
+Descobrir o IP de um domínio (DNS);nslookup <dominio>;Consulta servidores DNS para encontrar o endereço IP associado a um nome.
+Ver a tabela de endereços físicos (MAC) conhecidos;arp -a;Exibe a tabela ARP (Address Resolution Protocol) que mapeia IPs em endereços MAC na rede local.
+Rastrear o caminho de um pacote até o destino;tracert <ip_ou_host>;Mostra cada salto (roteador) que o pacote dá até chegar ao destino final.
+Criar uma tabela no SQL;CREATE TABLE <nome> (<colunas>);Comando DDL para definir a estrutura de uma nova tabela no banco de dados.
+Inserir dados em uma tabela;INSERT INTO <tabela> VALUES (<valores>);Comando DML para adicionar novas linhas de dados a uma tabela existente.
+Atualizar dados específicos no SQL;UPDATE <tabela> SET <coluna> = <valor> WHERE <condicao>;Altera registros existentes. O WHERE é obrigatório para não afetar toda a tabela!
+Apagar dados específicos no SQL;DELETE FROM <tabela> WHERE <condicao>;Remove linhas de uma tabela. Use sempre o WHERE para segurança.
+Salvar alterações permanentemente (Transação);COMMIT;Confirma todas as alterações feitas na transação atual no banco de dados.
+Desfazer alterações não salvas (Transação);ROLLBACK;Reverte o banco de dados ao estado anterior ao início da transação (ou último Savepoint).
