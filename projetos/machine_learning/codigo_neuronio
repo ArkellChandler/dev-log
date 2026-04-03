@@ -1,0 +1,25 @@
+import numpy as np
+
+# 1. Inputs (Ex: Dados de um sensor ou pixels de uma imagem)
+inputs = np.array([1.0, 2.0, 3.0])
+
+# 2. Pesos (Weights) - A "importância" que a IA dá para cada input
+# No início do treino, esses valores são aleatórios
+pesos = np.array([0.2, 0.8, -0.5])
+
+# 3. Viés (Bias) - Um ajuste para o neurônio não disparar por qualquer coisa
+vies = 2.0
+
+# --- O CÁLCULO (A MÁGICA DA IA) ---
+
+# Passo A: Multiplicação Ponto a Ponto e Soma (Produto Escalar)
+# É o famoso: (x1 * w1) + (x2 * w2) + (x3 * w3) + b
+soma_linear = np.dot(inputs, pesos) + vies
+
+# Passo B: Função de Ativação (ReLU)
+# Se o resultado for menor que 0, vira 0. Se for maior, mantém o valor.
+# Isso simula o disparo do neurônio biológico.
+resultado_final = max(0, soma_linear)
+
+print(f"Soma Linear: {soma_linear}")
+print(f"Saída do Neurônio (Ativação): {resultado_final}")

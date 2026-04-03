@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkellChandler/dev-log/blob/main/machine_learning/notebook_entrega.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkellChandler/dev-log/blob/main/projetos/machine_learning/notebook_entrega.ipynb)
 
 # 🌐 DECODER_PROJECT: Dev-Log & Data Architecture
 ### *“O futuro já chegou, só não foi distribuído uniformemente.”*
@@ -12,9 +12,9 @@
 
 ## 🎓 Formação & Bootcamps (Upgrade Progress)
 
-- **[SUCCESS]** 🚀 **TOTVS Bootcamp** | Engenharia de Dados & Integração
-- **[LOADING]** 🐍 **Accenture** | Python para Análise e Automação de Dados
-- **[NEW]** 📓 **DIO Challenge** | [Miniguia de Estudos: NotebookLM](./miniguia-estudos-notebooklm)
+- **[SUCCESS]** 🚀 **TOTVS Bootcamp** | [Acessar Pasta](./bootcamps/totvs)
+- **[LOADING]** 🐍 **Accenture** | [Acessar Pasta](./bootcamps/accenture)
+- **[NEW]** 📓 **DIO Challenge** | [Miniguia de Estudos: NotebookLM](./desafios/notebooklm)
 
 ### 📊 Status de Evolução Técnica (Study Progress)
 | Bootcamp / Skill | Status | Barra de Progresso |
@@ -46,17 +46,22 @@ graph TD
 1. **Camada de Dados:** MySQL (MariaDB) Transacional.
 2. **Processamento:** Pandas Engine para Limpeza e Transformação.
 3. **Resiliência:** `recovery_manager.py` (Failover para JSON/CSV).
-4. **Interface:** Dashboard PHP com Chart.js.
 
 ---
 
 ## 📂 Projetos Ativos & Estrutura
 
-### 📁 [miniguia-estudos-notebooklm](./miniguia-estudos-notebooklm)
-> **Desafio DIO:** Curadoria de fontes e engenharia de prompts sobre Finanças Introdutórias utilizando o NotebookLM.
+### 📁 [bootcamps](./bootcamps)
+> Repositório das formações TOTVS e Accenture.
 
-### 📁 [machine_learning](./machine_learning)
-> Core do motor de dados, incluindo scripts de integração e dashboards dinâmicos.
+### 📁 [projetos](./projetos)
+> Projetos core de Machine Learning e SQL.
+
+### 📁 [desafios](./desafios)
+> Desafios de curta duração (Ex: NotebookLM).
+
+### 📁 [recursos](./recursos)
+> Materiais de apoio, estudos e o Deck de Flashcards Anki.
 
 ---
 
