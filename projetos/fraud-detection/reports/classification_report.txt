@@ -1,3 +1,19 @@
+
+============================================================
+RELATÓRIO DE PERFORMANCE E COMPARAÇÃO
+============================================================
+PROJETO: Fraud Detection (XGBoost)
+AMOSTRAS: 1000
+TEMPO DE EXECUÇÃO: 0.0618 segundos
+ESTILO: HUD Performance Optimized
+
+COMPARAÇÃO COM PROJETO NEURAL (Referência):
+- Amostras Neurais: 100
+- Épocas Neurais: 500
+- Objetivo: Overfitting Control vs Decision Speed
+============================================================
+
+DETALHES DO MODELO:
               precision    recall  f1-score   support
 
            0       1.00      1.00      1.00       199
@@ -6,3 +22,4 @@
     accuracy                           1.00       200
    macro avg       1.00      1.00      1.00       200
 weighted avg       1.00      1.00      1.00       200
+

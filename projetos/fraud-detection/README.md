@@ -7,6 +7,26 @@ Este projeto implementa um motor de IA para detecção de fraudes utilizando o a
 
 ---
 
+### 📊 Análise de Importância das Variáveis (HUD Output)
+![Feature Importance](./reports/figures/feature_importance.png)
+> **Insight:** O gráfico acima identifica os 10 principais fatores que o modelo utiliza para sinalizar uma fraude. Scores mais altos indicam variáveis com maior poder preditivo.
+
+### ⚙️ Fluxo de Operação (Pipeline Architecture)
+```mermaid
+graph TD
+    A[data_loader.py] -->|Geração Sintética/Raw| B(Pre-processing)
+    B -->|Split 80/20| C{XGBoost Engine}
+    C -->|Training| D[model.fit]
+    C -->|Validation| E[model.predict]
+    D & E --> F[reports/classification_report.txt]
+    D & E --> G[reports/figures/feature_importance.png]
+    style A fill:#050505,stroke:#00f3ff,color:#00f3ff
+    style C fill:#050505,stroke:#ff00ff,color:#ff00ff
+    style G fill:#050505,stroke:#39ff14,color:#39ff14
+```
+
+---
+
 ## 🚀 Como Executar e Apresentar
 
 ### 1. Instalação e Preparação
@@ -17,7 +37,7 @@ Este projeto implementa um motor de IA para detecção de fraudes utilizando o a
 Execute o script principal para treinar o modelo e gerar os arquivos de análise:
 - **Comando:** `python src/train.py`
 - **Saídas:**
-  - `reports/classification_report.txt`: Métricas de performance (Precision/Recall).
+  - `reports/classification_report.txt`: Métricas de performance e comparação com modelos neurais.
   - `reports/figures/feature_importance.png`: Gráfico Cyberpunk HUD de Importância das Variáveis.
 
 ---
