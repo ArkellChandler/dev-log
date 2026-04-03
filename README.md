@@ -16,6 +16,28 @@
 - **[LOADING]** 🐍 **Accenture** | Python para Análise e Automação de Dados
 - **[NEW]** 📓 **DIO Challenge** | [Miniguia de Estudos: NotebookLM](./miniguia-estudos-notebooklm)
 
+### 📊 Status de Evolução Técnica (Study Progress)
+| Bootcamp / Skill | Status | Barra de Progresso |
+| :--- | :--- | :--- |
+| **TOTVS (Data Eng)** | `SUCCESS` | ![100%](https://geps.dev/progress/100?dangerColor=00f3ff&warningColor=ff00ff&successColor=39ff14) |
+| **Accenture (Python)** | `LOADING` | ![45%](https://geps.dev/progress/45?dangerColor=00f3ff&warningColor=ff00ff&successColor=f3f315) |
+| **Anki (Sintaxe/Teoria)** | `ACTIVE` | ![80%](https://geps.dev/progress/80?dangerColor=00f3ff&warningColor=ff00ff&successColor=00f3ff) |
+
+### 🚀 Roadmap de Conhecimento (Learning Flow)
+```mermaid
+graph TD
+    A[Caderno de Estudos .txt] -->|Curadoria| B(Anki: Flashcards Cyberpunk)
+    B -->|Prática de Comandos| C{Scripts de Automação}
+    C -->|Python/Pandas| D[Bootcamp Accenture]
+    C -->|SQL/ETL| E[Bootcamp TOTVS]
+    D -->|Integração| F[Dev-Log: Repositório Central]
+    E -->|Resiliência| F
+    style A fill:#050505,stroke:#00f3ff,stroke-width:2px,color:#00f3ff
+    style B fill:#050505,stroke:#ff00ff,stroke-width:2px,color:#ff00ff
+    style C fill:#050505,stroke:#f3f315,stroke-width:2px,color:#f3f315
+    style F fill:#050505,stroke:#39ff14,stroke-width:4px,color:#39ff14
+```
+
 ---
 
 ## 🏗️ Projeto de Destaque: Pipeline ETL & Disaster Recovery
