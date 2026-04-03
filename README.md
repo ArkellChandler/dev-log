@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkellChandler/dev-log/blob/main/projetos/machine_learning/notebook_entrega.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ArkellChandler/dev-log/blob/main/projetos/machine_learning/projects/pipeline_etl/notebook_entrega.ipynb)
 
 # 🌐 DECODER_PROJECT: Dev-Log & Data Architecture
 ### *“O futuro já chegou, só não foi distribuído uniformemente.”*
@@ -62,6 +62,7 @@ graph TD
 1. **Camada de Dados:** MySQL (MariaDB) Transacional.
 2. **Processamento:** Pandas Engine para Limpeza e Transformação.
 3. **Resiliência:** `recovery_manager.py` (Failover para JSON/CSV).
+4. **Localização:** [Acessar Pasta](./projetos/machine_learning/projects/pipeline_etl)
 
 ---
 
