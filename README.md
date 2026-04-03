@@ -28,16 +28,17 @@
 graph TD
     A[Caderno de Estudos .txt] -->|Curadoria| B(Anki: Flashcards Cyberpunk)
     B -->|Prática de Comandos| C{Scripts de Automação}
-    C -->|Fintech ML| D2[Fraud Detection System]
-    C -->|Python/Pandas| D[Bootcamp Accenture]
+    C -->|Fintech ML| D1[Fraud Detection System]
+    C -->|IA Agent| D2[Agente Financeiro Inteligente]
+    C -->|Python/Pandas| D3[Bootcamp Accenture]
     C -->|SQL/ETL| E[Bootcamp TOTVS]
-    D2 -->|Modelagem| F[Dev-Log: Repositório Central]
-    D -->|Integração| F
+    D1 & D2 & D3 -->|Integração| F[Dev-Log: Repositório Central]
     E -->|Resiliência| F
     style A fill:#050505,stroke:#00f3ff,stroke-width:2px,color:#00f3ff
     style B fill:#050505,stroke:#ff00ff,stroke-width:2px,color:#ff00ff
     style C fill:#050505,stroke:#f3f315,stroke-width:2px,color:#f3f315
-    style D2 fill:#050505,stroke:#ff0000,stroke-width:2px,color:#ff0000
+    style D1 fill:#050505,stroke:#ff0000,stroke-width:2px,color:#ff0000
+    style D2 fill:#050505,stroke:#00f3ff,stroke-width:2px,color:#00f3ff
     style F fill:#050505,stroke:#39ff14,stroke-width:4px,color:#39ff14
 ```
 
@@ -45,24 +46,29 @@ graph TD
 
 ## 🏗️ Projetos de Destaque (System Architecture)
 
-### 🛡️ I. Fraud Detection System (Fintech Solution)
+### 🛡️ I. Agente Financeiro Inteligente (AI Agent)
+*Planejamento Financeiro Personalizado com IA Generativa (RAG)*
+
+![Gemini](https://img.shields.io/badge/Engine-Gemini_1.5_Flash-ff00ff?style=flat-square&logo=google-gemini)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-39ff14?style=flat-square&logo=streamlit)
+![Python](https://img.shields.io/badge/Core-Python-00f3ff?style=flat-square&logo=python)
+
+1. **Inteligência:** IA consultiva que integra perfil do investidor e histórico de gastos.
+2. **Segurança:** Sistema anti-alucinação baseado em base de conhecimento (CSV/JSON).
+3. **Interface:** Chat interativo em tempo real via Streamlit.
+4. **Localização:** [Acessar Projeto](./projetos/agente_financeiro)
+
+### 🛡️ II. Fraud Detection System (Fintech Solution)
 *Sistema de Monitoramento e Inteligência para Detecção de Fraudes Financeiras*
 
-![XGBoost](https://img.shields.io/badge/Model-XGBoost-ff00ff?style=flat-square&logo=python)
-![F1-Score](https://img.shields.io/badge/F1--Score-1.00-39ff14?style=flat-square)
+1. **Algoritmo:** Classificador XGBoost otimizado para dados imbalanced.
+2. **Localização:** [Acessar Projeto](./projetos/fraud-detection)
 
-1. **Arquitetura:** Engine modular com `data_loader`, `models` e `train_pipeline`.
-2. **Algoritmo:** Classificador XGBoost otimizado para dados imbalanced.
-3. **Métricas:** Geração automática de Matriz de Confusão e Relatórios Técnicos.
-4. **Localização:** [Acessar Projeto](./projetos/fraud-detection)
-
-### 🛡️ II. Pipeline ETL & Disaster Recovery
+### 🛡️ III. Pipeline ETL & Disaster Recovery
 *Visualização de Fluxo de Dados e Resiliência em Tempo Real*
 
-1. **Camada de Dados:** MySQL (MariaDB) Transacional.
-2. **Processamento:** Pandas Engine para Limpeza e Transformação.
-3. **Resiliência:** `recovery_manager.py` (Failover para JSON/CSV).
-4. **Localização:** [Acessar Pasta](./projetos/machine_learning/projects/pipeline_etl)
+1. **Resiliência:** `recovery_manager.py` (Failover para JSON/CSV).
+2. **Localização:** [Acessar Pasta](./projetos/machine_learning/projects/pipeline_etl)
 
 ---
 
@@ -72,7 +78,7 @@ graph TD
 > Repositório das formações TOTVS e Accenture.
 
 ### 📁 [projetos](./projetos)
-> Projetos core: Fraud Detection, Machine Learning e SQL Architecture.
+> Projetos core: Agente Financeiro, Fraud Detection e Pipeline ETL.
 
 ### 📁 [desafios](./desafios)
 > Desafios de curta duração (Ex: NotebookLM).

@@ -1,0 +1,6 @@
+﻿[
+  {"nome": "CDB Liquidez Diária", "tipo": "Renda Fixa", "retorno_estimado": "100% CDI", "risco": "Baixo"},
+  {"nome": "Tesouro IPCA+", "tipo": "Renda Fixa", "retorno_estimado": "IPCA + 6%", "risco": "Baixo"},
+  {"nome": "Fundo Multimercado Neon", "tipo": "Híbrido", "retorno_estimado": "12% a.a.", "risco": "Moderado"},
+  {"nome": "Ações Dividendos", "tipo": "Renda Variável", "retorno_estimado": "Variável", "risco": "Alto"}
+]

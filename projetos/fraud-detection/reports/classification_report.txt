@@ -4,7 +4,7 @@ RELATÓRIO DE PERFORMANCE E COMPARAÇÃO
 ============================================================
 PROJETO: Fraud Detection (XGBoost)
 AMOSTRAS: 1000
-TEMPO DE EXECUÇÃO: 0.0618 segundos
+TEMPO DE EXECUÇÃO: 0.0592 segundos
 ESTILO: HUD Performance Optimized
 
 COMPARAÇÃO COM PROJETO NEURAL (Referência):
