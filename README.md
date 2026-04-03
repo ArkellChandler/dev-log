@@ -28,19 +28,35 @@
 graph TD
     A[Caderno de Estudos .txt] -->|Curadoria| B(Anki: Flashcards Cyberpunk)
     B -->|Prática de Comandos| C{Scripts de Automação}
+    C -->|Fintech ML| D2[Fraud Detection System]
     C -->|Python/Pandas| D[Bootcamp Accenture]
     C -->|SQL/ETL| E[Bootcamp TOTVS]
-    D -->|Integração| F[Dev-Log: Repositório Central]
+    D2 -->|Modelagem| F[Dev-Log: Repositório Central]
+    D -->|Integração| F
     E -->|Resiliência| F
     style A fill:#050505,stroke:#00f3ff,stroke-width:2px,color:#00f3ff
     style B fill:#050505,stroke:#ff00ff,stroke-width:2px,color:#ff00ff
     style C fill:#050505,stroke:#f3f315,stroke-width:2px,color:#f3f315
+    style D2 fill:#050505,stroke:#ff0000,stroke-width:2px,color:#ff0000
     style F fill:#050505,stroke:#39ff14,stroke-width:4px,color:#39ff14
 ```
 
 ---
 
-## 🏗️ Projeto de Destaque: Pipeline ETL & Disaster Recovery
+## 🏗️ Projetos de Destaque (System Architecture)
+
+### 🛡️ I. Fraud Detection System (Fintech Solution)
+*Sistema de Monitoramento e Inteligência para Detecção de Fraudes Financeiras*
+
+![XGBoost](https://img.shields.io/badge/Model-XGBoost-ff00ff?style=flat-square&logo=python)
+![F1-Score](https://img.shields.io/badge/F1--Score-1.00-39ff14?style=flat-square)
+
+1. **Arquitetura:** Engine modular com `data_loader`, `models` e `train_pipeline`.
+2. **Algoritmo:** Classificador XGBoost otimizado para dados imbalanced.
+3. **Métricas:** Geração automática de Matriz de Confusão e Relatórios Técnicos.
+4. **Localização:** [Acessar Projeto](./projetos/fraud-detection)
+
+### 🛡️ II. Pipeline ETL & Disaster Recovery
 *Visualização de Fluxo de Dados e Resiliência em Tempo Real*
 
 1. **Camada de Dados:** MySQL (MariaDB) Transacional.
@@ -55,7 +71,7 @@ graph TD
 > Repositório das formações TOTVS e Accenture.
 
 ### 📁 [projetos](./projetos)
-> Projetos core de Machine Learning e SQL.
+> Projetos core: Fraud Detection, Machine Learning e SQL Architecture.
 
 ### 📁 [desafios](./desafios)
 > Desafios de curta duração (Ex: NotebookLM).
