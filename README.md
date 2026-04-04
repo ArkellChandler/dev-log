@@ -5,7 +5,7 @@
 
 ![Status](https://img.shields.io/badge/System_Status-Online-00f3ff?style=for-the-badge&logo=target)
 ![TOTVS](https://img.shields.io/badge/TOTVS_Bootcamp-Concluido-ff00ff?style=for-the-badge)
-![Accenture](https://img.shields.io/badge/Accenture_Python-In_Progress-f3f315?style=for-the-badge&logo=python)
+![Accenture](https://img.shields.io/badge/Accenture_Python-Concluido-39ff14?style=for-the-badge&logo=python)
 ![Language](https://img.shields.io/badge/Stack-Python_%7C_SQL_%7C_PHP-39ff14?style=for-the-badge)
 
 ---
@@ -20,7 +20,7 @@
 | Bootcamp / Skill | Status | Barra de Progresso |
 | :--- | :--- | :--- |
 | **TOTVS (Data Eng)** | `SUCCESS` | ![100%](https://geps.dev/progress/100?dangerColor=00f3ff&warningColor=ff00ff&successColor=39ff14) |
-| **Accenture (Python)** | `SUCCESS` | ![100%](https://geps.dev/progress/45?dangerColor=00f3ff&warningColor=ff00ff&successColor=f3f315) |
+| **Accenture (Python)** | `SUCCESS` | ![100%](https://geps.dev/progress/100?dangerColor=00f3ff&warningColor=ff00ff&successColor=39ff14) |
 | **Anki (Sintaxe/Teoria)** | `ACTIVE` | ![80%](https://geps.dev/progress/80?dangerColor=00f3ff&warningColor=ff00ff&successColor=00f3ff) |
 
 ### 🚀 Roadmap de Conhecimento (Learning Flow)
