@@ -21,6 +21,8 @@ graph TD
 - **Gerenciamento de Modelos:** Interface para listar modelos ativos e selecionar dinamicamente entre as versões Gemini 1.5, 2.0 e 2.5.
 - **Tratamento de Cota:** Notificação amigável ao usuário caso o limite de requisições da API Gemini (`ResourceExhausted`) seja atingido.
 - **Compatibilidade de Dados:** Correção na leitura de arquivos CSV e JSON para suportar codificações com BOM (Byte Order Mark), garantindo estabilidade no Windows.
+- **Resiliência de Dados (Modo Demo):** Implementação de persistência e integridade de dados para garantir o funcionamento contínuo durante demonstrações.
+- **Demonstração em Vídeo:** [Assista no Google Drive](https://drive.google.com/file/d/1E9qqOjTmmU1TdfgXKdx44sWbXE6w3ETM/view?usp=drive_link) - Vídeo demonstrativo apresentando o fluxo de operação e as capacidades do Agente Financeiro Inteligente.
 
 ## 🚀 Como Executar
 1. Instale as dependências: `pip install streamlit google-generativeai pandas`
