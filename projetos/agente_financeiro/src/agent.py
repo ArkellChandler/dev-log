@@ -12,9 +12,13 @@ def load_knowledge_base():
         produtos = json.load(f)
     return transacoes, perfil, produtos
 
-def get_financial_advice(user_input, api_key):
+def list_available_models(api_key):
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    return genai.list_models()
+
+def get_financial_advice(user_input, api_key, model_name="gemini-1.5-flash"):
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel(model_name)
     
     transacoes, perfil, produtos = load_knowledge_base()
     

@@ -17,22 +17,23 @@ graph TD
     style User fill:#050505,stroke:#39ff14,color:#39ff14
 ```
 
-## 📂 Estrutura do Projeto
-- `data/`: Transações (CSV), Perfil (JSON), Produtos (JSON).
-- `src/`: Lógica de integração e anti-alucinação (`agent.py`).
-- `app.py`: Interface de chat interativa em Streamlit.
-
-## 🛡️ Segurança e Anti-Alucinação
-O agente utiliza a técnica de **Context Injection** (RAG simplificado), onde os dados reais do cliente são injetados no prompt do sistema antes da chamada à API. Isso garante que o modelo:
-1. Nunca invente valores de saldo ou transações inexistentes.
-2. Sugira apenas produtos financeiros presentes no catálogo mockado.
-3. Responda "Informação não disponível" para solicitações fora do escopo (ex: Criptoativos).
+## 🛠️ Funcionalidades Recentes
+- **Gerenciamento de Modelos:** Interface para listar modelos ativos e selecionar dinamicamente entre as versões Gemini 1.5, 2.0 e 2.5.
+- **Tratamento de Cota:** Notificação amigável ao usuário caso o limite de requisições da API Gemini (`ResourceExhausted`) seja atingido.
+- **Compatibilidade de Dados:** Correção na leitura de arquivos CSV e JSON para suportar codificações com BOM (Byte Order Mark), garantindo estabilidade no Windows.
 
 ## 🚀 Como Executar
 1. Instale as dependências: `pip install streamlit google-generativeai pandas`
 2. Navegue até a pasta: `cd dev-log/projetos/agente_financeiro`
 3. Execute a aplicação: `streamlit run app.py`
-4. Insira sua **Gemini API Key** no painel lateral do navegador.
+4. Configure sua Gemini API Key no menu lateral (ou utilize a chave padrão configurada).
+5. Selecione o modelo desejado (ex: `gemini-2.0-flash`).
+6. Inicie a conversa no chat.
+
+## 📂 Estrutura do Projeto
+- `data/`: Transações (CSV), Perfil (JSON), Produtos (JSON).
+- `src/`: Lógica de integração e anti-alucinação (`agent.py`).
+- `app.py`: Interface de chat interativa em Streamlit.
 
 ---
 *C:\Users\User\dev-log\projetos\agente_financeiro> agent status --active*
