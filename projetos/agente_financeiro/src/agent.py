@@ -5,10 +5,10 @@ import os
 
 def load_knowledge_base():
     base_path = os.path.join(os.path.dirname(__file__), '..', 'data')
-    transacoes = pd.read_csv(os.path.join(base_path, 'transacoes.csv'))
-    with open(os.path.join(base_path, 'perfil_investidor.json'), 'r') as f:
+    transacoes = pd.read_csv(os.path.join(base_path, 'transacoes.csv'), encoding='utf-8-sig')
+    with open(os.path.join(base_path, 'perfil_investidor.json'), 'r', encoding='utf-8-sig') as f:
         perfil = json.load(f)
-    with open(os.path.join(base_path, 'produtos_financeiros.json'), 'r') as f:
+    with open(os.path.join(base_path, 'produtos_financeiros.json'), 'r', encoding='utf-8-sig') as f:
         produtos = json.load(f)
     return transacoes, perfil, produtos
 
