@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Arkell Chandler</title>
+    <title>Currículo - Arkell Chandler Barbosa</title>
+    <meta name="description" content="Currículo Profissional de Arkell Chandler Barbosa - Desenvolvedor de Software e Especialista em Dados">
     <style>
         :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2d3748;
-            --accent-color: #3182ce;
-            --text-color: #4a5568;
-            --bg-color: #f7fafc;
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --text: #1e293b;
+            --light-text: #64748b;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
         }
 
         * {
@@ -20,210 +24,260 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            padding: 40px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 2rem;
         }
 
-        .container {
-            max-width: 900px;
+        .cv-container {
+            max-width: 850px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         header {
             display: flex;
-            align-items: center;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        .photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent-color);
-            margin-right: 30px;
+        .header-main h1 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
         }
 
-        .header-info h1 {
-            color: var(--primary-color);
-            font-size: 2.2rem;
-            margin-bottom: 5px;
+        .header-main p {
+            font-size: 1.125rem;
+            color: var(--accent);
+            font-weight: 600;
         }
 
-        .header-info p {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
+        .contact-grid {
+            text-align: right;
+            font-size: 0.875rem;
+            color: var(--secondary);
         }
 
-        .contact-info {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+        .contact-grid div {
+            margin-bottom: 0.25rem;
         }
 
-        .contact-info a {
-            color: var(--accent-color);
+        .contact-grid a {
+            color: var(--accent);
             text-decoration: none;
         }
 
         section {
-            margin-bottom: 25px;
+            margin-bottom: 2rem;
         }
 
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            font-size: 1.25rem;
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 0.75rem;
+            margin-bottom: 1rem;
             text-transform: uppercase;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
+            letter-spacing: 0.05em;
         }
 
-        .job, .edu, .project {
-            margin-bottom: 15px;
+        .summary p {
+            color: var(--secondary);
+            font-size: 0.95rem;
         }
 
-        .job-header, .edu-header {
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .item {
+            margin-bottom: 1.25rem;
+        }
+
+        .item-header {
             display: flex;
             justify-content: space-between;
-            font-weight: bold;
-            color: var(--secondary-color);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+        .item-sub {
+            display: flex;
+            justify-content: space-between;
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
-        .skill-item {
-            background: #edf2f7;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
+        .item-desc {
+            font-size: 0.875rem;
+            color: var(--secondary);
         }
 
-        .tag {
-            background: var(--primary-color);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
+        .item-desc ul {
+            margin-left: 1.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #eff6ff;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
             font-size: 0.8rem;
-            margin-right: 5px;
+            font-weight: 600;
+            border: 1px solid #dbeafe;
+        }
+
+        .badge-success {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 640px) {
+            header { flex-direction: column; }
+            .contact-grid { text-align: left; margin-top: 1rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            body { padding: 1rem; }
+            .cv-container { padding: 1.5rem; }
         }
 
         @media print {
             body { background: white; padding: 0; }
-            .container { box-shadow: none; border-radius: 0; max-width: 100%; }
+            .cv-container { box-shadow: none; max-width: 100%; width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="cv-container">
         <header>
-            <img src="C:/Users/User/Downloads/arkell imgem.jpeg" alt="Foto de Arkell Chandler" class="photo">
-            <div class="header-info">
-                <h1>Arkell Chandler Hartstein Barbosa</h1>
-                <div class="contact-info">
-                    <span>📍 São Caetano do Sul, SP</span>
-                    <span>📞 (11) 97854-5220</span>
-                    <span>✉️ arkellchandler@gmail.com</span>
-                </div>
-                <div class="contact-info">
-                    <a href="https://linkedin.com/in/arkell-chandler" target="_blank">linkedin.com/in/arkell-chandler</a> |
-                    <a href="https://github.com/ArkellChandler/dev-log" target="_blank">github.com/ArkellChandler/dev-log</a>
-                </div>
+            <div class="header-main">
+                <h1>Arkell Chandler Barbosa</h1>
+                <p>Desenvolvedor de Software | Especialista em Dados & IA</p>
+            </div>
+            <div class="contact-grid">
+                <div>📍 São Caetano do Sul, SP</div>
+                <div>📞 (11) 97854-5220</div>
+                <div>✉️ <a href="mailto:arkellchandler@gmail.com">arkellchandler@gmail.com</a></div>
+                <div>🔗 <a href="https://github.com/ArkellChandler">github.com/ArkellChandler</a></div>
+                <div>💼 <a href="https://linkedin.com/in/arkell-chandler">linkedin.com/in/arkell-chandler</a></div>
             </div>
         </header>
 
-        <section id="objetivo">
-            <h2>Objetivo Profissional</h2>
-            <p>Atuar de forma estratégica em Tecnologia da Informação, aplicando habilidades em Python, SQL e Lógica de Programação. Busco oportunidades como Desenvolvedor Júnior ou Estagiário para contribuir com soluções inovadoras e crescer tecnicamente em ambientes de alta performance.</p>
+        <section class="summary">
+            <h2>Perfil Profissional</h2>
+            <p>Desenvolvedor focado em soluções baseadas em dados e Inteligência Artificial. Experiência na criação de agentes inteligentes utilizando arquitetura RAG e modelos Generativos (Gemini). Especialista em automação de processos, pipelines ETL e análise de segurança de dados. Perfil analítico com formação técnica sólida e vivência internacional.</p>
         </section>
 
-        <section id="qualificacoes">
-            <h2>Resumo de Qualificações</h2>
-            <ul>
-                <li><strong>Desenvolvimento Tech:</strong> Foco atual no Bootcamp TOTVS e Projetos Python.</li>
-                <li><strong>Multilíngue:</strong> Fluente em Português e Espanhol; Nível intermediário em Inglês, Francês e Quéchua.</li>
-                <li><strong>Perfil Analítico:</strong> Experiência em suporte jurídico internacional e e-commerce de grande escala.</li>
-            </ul>
-        </section>
-
-        <section id="projetos">
-            <h2>Projetos de Software (GitHub)</h2>
-            <div class="project">
-                <p><strong>Gerenciador de Tarefas Inteligente</strong> <span class="tag">Python</span> <span class="tag">JSON</span></p>
-                <p style="font-size: 0.9rem;">Aplicação CLI completa com persistência de dados e motor de busca parcial integrado.</p>
+        <section>
+            <h2>Projetos de Destaque (GitHub)</h2>
+            <div class="item">
+                <div class="item-header">Agente Financeiro Inteligente (AI-Driven Fintech Agent)</div>
+                <div class="item-sub">Python | Google Gemini | RAG | Streamlit</div>
+                <div class="item-desc">
+                    Sistema consultivo que integra bases de dados CSV/JSON para fornecer conselhos financeiros personalizados. Implementação de persistência de dados e resiliência de conexão.
+                </div>
             </div>
-            <div class="project">
-                <p><strong>Sistema de Segurança Lógica</strong> <span class="tag">Python</span> <span class="tag">Lógica</span></p>
-                <p style="font-size: 0.9rem;">Algoritmo de validação de acesso utilizando estruturas complexas de dicionários e funções.</p>
+            <div class="item">
+                <div class="item-header">Fraud Detection System</div>
+                <div class="item-sub">Machine Learning | XGBoost | Pandas | Scikit-Learn</div>
+                <div class="item-desc">
+                    Algoritmo de monitoramento e inteligência para detecção de fraudes em transações financeiras, otimizado para lidar com dados altamente desbalanceados.
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-header">ETL Pipeline & Disaster Recovery</div>
+                <div class="item-sub">Python | SQL | Data Architecture</div>
+                <div class="item-desc">
+                    Arquitetura de dados resiliente com failover automático e gestão de integridade de informações em tempo real.
+                </div>
             </div>
         </section>
 
-        <section id="experiencia">
+        <section>
             <h2>Experiência Profissional</h2>
-            <div class="job">
-                <div class="job-header">
-                    <span>Atendente | Outback Steak House</span>
-                    <span>2024 – Atual</span>
-                </div>
-                <p style="font-size: 0.9rem;">Excelência no atendimento ao cliente e resolução de conflitos em ambiente de alto padrão.</p>
+            <div class="item">
+                <div class="item-header">Atendente High-Touch</div>
+                <div class="item-sub">Outback Steak House | 2024 – Atual</div>
+                <div class="item-desc">Resolução de conflitos e atendimento de excelência sob pressão em ambiente de alto padrão.</div>
             </div>
-            <div class="job">
-                <div class="job-header">
-                    <span>Suporte E-commerce | Carrefour S.A</span>
-                    <span>2023 – 2024</span>
-                </div>
-                <p style="font-size: 0.9rem;">Gestão de pedidos, logística reversa e suporte técnico em plataforma digital.</p>
+            <div class="item">
+                <div class="item-header">Suporte E-commerce</div>
+                <div class="item-sub">Carrefour S.A | 2023 – 2024</div>
+                <div class="item-desc">Gestão logística e suporte técnico especializado em plataformas digitais de larga escala.</div>
             </div>
-            <div class="job">
-                <div class="job-header">
-                    <span>Auxiliar Jurídico | Castedo's & Masafret (Bolívia)</span>
-                    <span>2021 – 2023</span>
-                </div>
-                <p style="font-size: 0.9rem;">Atendimento internacional e organização de fluxos documentais em espanhol.</p>
+            <div class="item">
+                <div class="item-header">Auxiliar Jurídico Internacional</div>
+                <div class="item-sub">Castedo's & Masafret (Bolívia) | 2021 – 2023</div>
+                <div class="item-desc">Atendimento jurídico bilíngue e gestão de fluxos documentais críticos em espanhol.</div>
             </div>
         </section>
 
-        <section id="formacao">
-            <h2>Formação Acadêmica</h2>
-            <div class="edu">
-                <div class="edu-header">
-                    <span>Análise e Desenvolvimento de Sistemas (ADS)</span>
-                    <span>Estácio | 2026</span>
+        <section>
+            <h2>Formação & Certificações</h2>
+            <div class="grid-2">
+                <div class="item">
+                    <div class="item-header">ADS (Análise de Sistemas)</div>
+                    <div class="item-sub">Estácio | 2026</div>
+                    <div class="item-desc">Tecnólogo em andamento.</div>
                 </div>
-                <p style="font-size: 0.9rem;">Tecnólogo em andamento (Previsão de conclusão em 2026).</p>
-            </div>
-            <div class="edu">
-                <div class="edu-header">
-                    <span>Bootcamp TOTVS</span>
-                    <span>Em andamento</span>
+                <div class="item">
+                    <div class="item-header">Bootcamp TOTVS <span class="badge-success">CONCLUÍDO</span></div>
+                    <div class="item-sub">Engenharia de Dados & SQL</div>
                 </div>
-                <p style="font-size: 0.9rem;">Capacitação intensiva em desenvolvimento de software e tecnologias TOTVS.</p>
+                <div class="item">
+                    <div class="item-header">Bootcamp Accenture <span class="badge-success">CONCLUÍDO</span></div>
+                    <div class="item-sub">Desenvolvimento Python Avançado</div>
+                </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Competências Técnicas (Hard Skills)</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Linguagens: Python, SQL, HTML, CSS</div>
-                <div class="skill-item">Ferramentas: Git, GitHub, VS Code</div>
-                <div class="skill-item">Plataformas: Salesforce, SQL Server (SSIS)</div>
-                <div class="skill-item">Idiomas: Português, Espanhol, Inglês, Francês</div>
+        <section>
+            <h2>Competências Técnicas</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Python (Pandas, Scikit-Learn, XGBoost)</span>
+                <span class="skill-tag">SQL Server / MySQL</span>
+                <span class="skill-tag">IA Generativa (Gemini API / RAG)</span>
+                <span class="skill-tag">Streamlit</span>
+                <span class="skill-tag">Git / GitHub / CI-CD</span>
+                <span class="skill-tag">ETL & Data Pipelines</span>
+                <span class="skill-tag">PHP / HTML5 / CSS3</span>
+                <span class="skill-tag">Linux / PowerShell</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Português (Nativo)</span>
+                <span class="skill-tag">Espanhol (Fluente)</span>
+                <span class="skill-tag">Inglês (Intermediário)</span>
+                <span class="skill-tag">Francês (Intermediário)</span>
+                <span class="skill-tag">Quéchua (Básico)</span>
             </div>
         </section>
     </div>
