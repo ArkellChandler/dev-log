@@ -20,7 +20,7 @@
 | Bootcamp / Skill | Status | Barra de Progresso |
 | :--- | :--- | :--- |
 | **TOTVS (Data Eng)** | `SUCCESS` | ![100%](https://geps.dev/progress/100?dangerColor=00f3ff&warningColor=ff00ff&successColor=39ff14) |
-| **Accenture (Python)** | `LOADING` | ![100%](https://geps.dev/progress/45?dangerColor=00f3ff&warningColor=ff00ff&successColor=f3f315) |
+| **Accenture (Python)** | `SUCCESS` | ![100%](https://geps.dev/progress/45?dangerColor=00f3ff&warningColor=ff00ff&successColor=f3f315) |
 | **Anki (Sintaxe/Teoria)** | `ACTIVE` | ![80%](https://geps.dev/progress/80?dangerColor=00f3ff&warningColor=ff00ff&successColor=00f3ff) |
 
 ### 🚀 Roadmap de Conhecimento (Learning Flow)
